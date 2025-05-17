@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.546875,
+    "zoomFactor": 0.7619362677197604,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -51,8 +51,8 @@
       "name": "Box",
       "persistentUuid": "b93a8fd2-1681-48dd-877d-c6dbe36cfaf8",
       "width": 275,
-      "x": 50,
-      "y": -288,
+      "x": -211,
+      "y": -381,
       "zOrder": 2,
       "numberProperties": [],
       "stringProperties": [],
@@ -76,10 +76,58 @@
           "name": "RotateSpeed",
           "type": "number",
           "value": 150
+        },
+        {
+          "name": "Recoil",
+          "type": "structure",
+          "children": [
+            {
+              "name": "angle",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "force",
+              "type": "number",
+              "value": 0
+            }
+          ]
         }
       ],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "isFolded": true,
+          "name": "FireBullet",
+          "type": "FireBullet::FireBullet",
+          "FireCooldown": 2,
+          "HasJustFired": false,
+          "RotateBullet": true,
+          "FiringArc": 45,
+          "BulletQuantity": 1,
+          "AngleVariance": 0,
+          "BulletSpeedVariance": 0,
+          "AmmoQuantity": 0,
+          "ShotsPerReload": 0,
+          "ReloadDuration": 1,
+          "MaxAmmo": 0,
+          "ShotsBeforeNextReload": 0,
+          "TotalShotsFired": 0,
+          "TotalBulletsCreated": 0,
+          "StartingAmmo": 0,
+          "TotalReloadsCompleted": 0,
+          "UnlimitedAmmo": true,
+          "ReloadInProgress": false,
+          "HeatIncreasePerShot": 0,
+          "HeatLevel": 0,
+          "AutomaticReloading": true,
+          "OverheatDuration": 0,
+          "LinearCoolingRate": 0.1,
+          "ExponentialCoolingRate": 0.3,
+          "BulletLayer": "",
+          "RandomizedAngle": 0
+        }
+      ],
       "animations": [
         {
           "name": "",
@@ -190,6 +238,78 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Bullet",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "MoveSpeed",
+          "type": "number",
+          "value": 250
+        },
+        {
+          "name": "RotateSpeed",
+          "type": "number",
+          "value": 150
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "_bullet",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "_bullet",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -197,6 +317,9 @@
     "children": [
       {
         "objectName": "Player"
+      },
+      {
+        "objectName": "Bullet"
       },
       {
         "objectName": "Box"
@@ -303,13 +426,12 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "AddForceXY"
+                        "value": "MettreX"
                       },
                       "parameters": [
                         "Player",
-                        "Player.MoveSpeed",
-                        "0",
-                        ""
+                        "+",
+                        "Player.MoveSpeed * TimeDelta()"
                       ]
                     }
                   ]
@@ -347,13 +469,12 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "AddForceXY"
+                        "value": "MettreX"
                       },
                       "parameters": [
                         "Player",
-                        "-Player.MoveSpeed",
-                        "0",
-                        ""
+                        "-",
+                        "Player.MoveSpeed * TimeDelta()"
                       ]
                     }
                   ]
@@ -391,13 +512,12 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "AddForceXY"
+                        "value": "MettreY"
                       },
                       "parameters": [
                         "Player",
-                        "0",
-                        "-Player.MoveSpeed",
-                        ""
+                        "-",
+                        "Player.MoveSpeed * TimeDelta()"
                       ]
                     }
                   ]
@@ -435,13 +555,43 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "AddForceXY"
+                        "value": "MettreY"
                       },
                       "parameters": [
                         "Player",
-                        "0",
-                        "Player.MoveSpeed",
-                        ""
+                        "+",
+                        "Player.MoveSpeed * TimeDelta()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MouseButtonFromTextPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Left\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::Fire"
+                      },
+                      "parameters": [
+                        "Player",
+                        "FireBullet",
+                        "Player.X()",
+                        "Player.Y()",
+                        "Bullet",
+                        "Player.Angle()",
+                        "3000",
+                        "3000"
                       ]
                     }
                   ]
@@ -462,6 +612,87 @@
                     "AngleBetweenPositions(Player.X(), Player.Y(), CursorX(), CursorY())",
                     "Player.RotateSpeed",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Player.Recoil.angle",
+                    "Player.Recoil.force",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Recoil.force",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Recoil.force",
+                        "=",
+                        "max(0, Player.Recoil.force - 3000 * TimeDelta())"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::HasJustFired"
+                      },
+                      "parameters": [
+                        "Player",
+                        "FireBullet",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Recoil.force",
+                        "=",
+                        "3000"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Recoil.angle",
+                        "=",
+                        "Player.Angle() + 180"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -501,7 +732,7 @@
                   "parameters": [
                     "",
                     "=",
-                    "lerp(Player.Y(), CameraCenterY(), exp(-LerpDecay* TimeDelta()))",
+                    "lerp(min(Player.Y(), 0), CameraCenterY(), exp(-LerpDecay* TimeDelta()))",
                     "",
                     ""
                   ]
@@ -576,6 +807,10 @@
     {
       "name": "Effect",
       "type": "EffectCapability::EffectBehavior"
+    },
+    {
+      "name": "FireBullet",
+      "type": "FireBullet::FireBullet"
     },
     {
       "name": "Flippable",
