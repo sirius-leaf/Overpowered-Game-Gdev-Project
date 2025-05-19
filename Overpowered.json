@@ -154,6 +154,54 @@
         "name": "assets\\Just a box.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "Tak berjudul1303_20250519184219.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Tak berjudul1303_20250519184219.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Tak berjudul1303_20250519184245.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Tak berjudul1303_20250519184245.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Tak berjudul1303_20250519184245.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Tak berjudul1303_20250519184245",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Tak berjudul1303_20250519184219.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Tak berjudul1303_20250519184219",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "PlayerCharge.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PlayerCharge.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Bullet.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Bullet.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []

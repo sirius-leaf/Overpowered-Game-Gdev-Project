@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.49508400737488956,
+    "zoomFactor": 0.301046119718248,
     "windowMask": false
   },
   "objectsGroups": [
@@ -89,12 +89,11 @@
       "angle": -90,
       "customSize": true,
       "depth": 0,
-      "height": 128,
-      "keepRatio": true,
+      "height": 152,
       "layer": "",
       "name": "Player",
       "persistentUuid": "820cd064-758d-46df-bbe4-fa8c6b5e48e2",
-      "width": 128,
+      "width": 102,
       "x": 0,
       "y": 0,
       "zOrder": 1,
@@ -185,6 +184,55 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": -90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "PlayerWingLeft",
+      "persistentUuid": "67e7af76-0b8a-4806-9c6b-65c445e3d623",
+      "width": 0,
+      "x": -66,
+      "y": 67,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": -90,
+      "customSize": false,
+      "flippedY": true,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "PlayerWingRight",
+      "persistentUuid": "46459211-25a1-42af-8630-547204282e7b",
+      "width": 0,
+      "x": 66,
+      "y": 67,
+      "zOrder": -1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 208,
+      "layer": "",
+      "name": "PlayerCharge",
+      "persistentUuid": "b2e43e1c-951f-4d42-a8b3-c53b1399fafe",
+      "width": 208,
+      "x": 0,
+      "y": 0,
+      "zOrder": -2,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -192,6 +240,7 @@
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
       "name": "Player",
+      "preScale": 2,
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -220,6 +269,25 @@
           "name": "Health",
           "type": "number",
           "value": 10
+        },
+        {
+          "name": "WingRotationOffset",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CamShake",
+          "type": "array",
+          "children": [
+            {
+              "type": "number",
+              "value": 0
+            },
+            {
+              "type": "number",
+              "value": 0
+            }
+          ]
         }
       ],
       "effects": [],
@@ -278,50 +346,41 @@
       ],
       "animations": [
         {
-          "name": "",
+          "name": "Tak berjudul1303_20250519184219",
           "useMultipleDirections": false,
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
-                  "hasCustomCollisionMask": true,
-                  "image": "_player.png",
+                  "hasCustomCollisionMask": false,
+                  "image": "Tak berjudul1303_20250519184219",
                   "points": [
                     {
-                      "name": "Bullet",
+                      "name": "WingLeft",
                       "x": 16,
-                      "y": 8
+                      "y": 6
+                    },
+                    {
+                      "name": "WingRight",
+                      "x": 16,
+                      "y": 70
                     }
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8,
-                    "y": 8
+                    "x": 50.5,
+                    "y": 38
                   },
                   "centerPoint": {
-                    "automatic": true,
+                    "automatic": false,
                     "name": "centre",
-                    "x": 0,
-                    "y": 0
+                    "x": 50.5,
+                    "y": 38
                   },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 1,
-                        "y": 1
-                      },
-                      {
-                        "x": 14,
-                        "y": 8
-                      },
-                      {
-                        "x": 1,
-                        "y": 15
-                      }
-                    ]
-                  ]
+                  "customCollisionMask": []
                 }
               ]
             }
@@ -393,6 +452,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "Bullet",
+      "preScale": 2,
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -421,12 +481,12 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "_bullet",
+                  "image": "Bullet.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 32,
-                    "y": 16
+                    "x": 44.5,
+                    "y": 39
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -437,20 +497,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 30,
+                        "y": 29
                       },
                       {
-                        "x": 64,
-                        "y": 0
+                        "x": 63,
+                        "y": 29
                       },
                       {
-                        "x": 64,
-                        "y": 32
+                        "x": 63,
+                        "y": 49
                       },
                       {
-                        "x": 0,
-                        "y": 32
+                        "x": 30,
+                        "y": 49
                       }
                     ]
                   ]
@@ -1415,6 +1475,208 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "PlayerWingLeft",
+      "preScale": 2,
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "RotationOffset",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Tak berjudul1303_20250519184245",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Tak berjudul1303_20250519184245",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 1,
+                    "y": 4
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 1,
+                    "y": 4
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 62,
+                        "y": 0
+                      },
+                      {
+                        "x": 62,
+                        "y": 37
+                      },
+                      {
+                        "x": 0,
+                        "y": 37
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "PlayerWingRight",
+      "preScale": 2,
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "RotationOffset",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Tak berjudul1303_20250519184245",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Tak berjudul1303_20250519184245",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 1,
+                    "y": 4
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 1,
+                    "y": 4
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 62,
+                        "y": 0
+                      },
+                      {
+                        "x": 62,
+                        "y": 37
+                      },
+                      {
+                        "x": 0,
+                        "y": 37
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "PlayerCharge",
+      "preScale": 2,
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "PlayerCharge.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 52,
+                    "y": 52
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 31,
+                        "y": 31
+                      },
+                      {
+                        "x": 73,
+                        "y": 31
+                      },
+                      {
+                        "x": 73,
+                        "y": 73
+                      },
+                      {
+                        "x": 31,
+                        "y": 73
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -1492,13 +1754,27 @@
         "folderName": "Player",
         "children": [
           {
+            "folderName": "Body",
+            "children": [
+              {
+                "objectName": "Player"
+              },
+              {
+                "objectName": "PlayerWingLeft"
+              },
+              {
+                "objectName": "PlayerWingRight"
+              },
+              {
+                "objectName": "PlayerCharge"
+              }
+            ]
+          },
+          {
             "objectName": "PlayerChargeParticle"
           },
           {
             "objectName": "Bullet"
-          },
-          {
-            "objectName": "Player"
           }
         ]
       },
@@ -1583,6 +1859,23 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "ScalableCapability::ScalableBehavior::SetValue"
+              },
+              "parameters": [
+                "PlayerCharge",
+                "Scale",
+                "=",
+                "0.00001"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1591,7 +1884,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Player",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1752,9 +2044,79 @@
                   "parameters": [
                     "PlayerChargeParticle",
                     "=",
-                    "Player.PointX(\"Bullet\")",
+                    "Player.X()",
                     "=",
-                    "Player.PointY(\"Bullet\")"
+                    "Player.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "PlayerCharge",
+                    "=",
+                    "Player.X()",
+                    "=",
+                    "Player.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "CamShake[0]",
+                    "=",
+                    "cos(TimeFromStart() * 40.4494897427) * 60 * Player.Tween::Value(\"CamShake\")"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "CamShake[1]",
+                    "=",
+                    "sin(TimeFromStart() * 80.4142135623) * 60 * Player.Tween::Value(\"CamShake\")"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetCameraAngle"
+                  },
+                  "parameters": [
+                    "",
+                    "=",
+                    "Player.CamShake[0] / 80 * Player.Tween::Value(\"CamShake\")",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetLayerEffectParameter"
+                  },
+                  "parameters": [
+                    "",
+                    "",
+                    "\"ZoomBlur\"",
+                    "\"strength\"",
+                    "Player.Tween::Value(\"CamShake\") * 0.6"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetLayerEffectParameter"
+                  },
+                  "parameters": [
+                    "",
+                    "",
+                    "\"Adjustment\"",
+                    "\"brightness\"",
+                    "Player.Tween::Value(\"CamShake\") * 2 + 1"
                   ]
                 }
               ],
@@ -1777,6 +2139,52 @@
                       "parameters": [
                         "",
                         "\"FireDelay\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectVariableTween3"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Tween",
+                        "\"OpenWing\"",
+                        "WingRotationOffset",
+                        "30",
+                        "\"easeOutExpo\"",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectValueTween"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Tween",
+                        "\"CamZoom\"",
+                        "Player.Tween::Value(\"CamZoom\")",
+                        "0.2",
+                        "\"linear\"",
+                        "2",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                      },
+                      "parameters": [
+                        "PlayerCharge",
+                        "Tween",
+                        "\"Charge\"",
+                        "1",
+                        "\"easeOutExpo\"",
+                        "1",
+                        "",
+                        "no"
                       ]
                     }
                   ]
@@ -1845,6 +2253,12 @@
                         "<=",
                         "0"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
                     }
                   ],
                   "actions": [
@@ -1855,8 +2269,24 @@
                       "parameters": [
                         "",
                         "PlayerChargeParticle",
-                        "Player.PointX(\"Bullet\")",
-                        "Player.PointY(\"Bullet\")",
+                        "Player.X()",
+                        "Player.Y()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectValueTween"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Tween",
+                        "\"CamShake\"",
+                        "0",
+                        "1",
+                        "\"easeInSine\"",
+                        "2",
+                        "",
                         ""
                       ]
                     }
@@ -1889,11 +2319,177 @@
                 },
                 {
                   "type": {
+                    "value": "Tween::TweenBehavior::AddObjectVariableTween3"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Tween",
+                    "\"OpenWing\"",
+                    "WingRotationOffset",
+                    "0",
+                    "\"easeOutExpo\"",
+                    "1",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                  },
+                  "parameters": [
+                    "PlayerCharge",
+                    "Tween",
+                    "\"Charge\"",
+                    "0.00001",
+                    "\"easeOutSine\"",
+                    "1",
+                    "",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectValueTween"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Tween",
+                    "\"CamZoom\"",
+                    "Player.Tween::Value(\"CamZoom\")",
+                    "0",
+                    "\"easeOutExpo\"",
+                    "0.5",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "CamShake[0]",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "CamShake[1]",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetCameraAngle"
+                  },
+                  "parameters": [
+                    "",
+                    "=",
+                    "0",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetLayerEffectParameter"
+                  },
+                  "parameters": [
+                    "",
+                    "",
+                    "\"ZoomBlur\"",
+                    "\"strength\"",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetLayerEffectParameter"
+                  },
+                  "parameters": [
+                    "",
+                    "",
+                    "\"Adjustment\"",
+                    "\"brightness\"",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Delete"
                   },
                   "parameters": [
                     "PlayerChargeParticle",
                     ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Wings",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "PlayerWingLeft",
+                    "=",
+                    "Player.Angle() - Player.WingRotationOffset"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "PlayerWingRight",
+                    "=",
+                    "Player.Angle() + Player.WingRotationOffset"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "PlayerWingLeft",
+                    "=",
+                    "Player.PointX(\"WingLeft\")",
+                    "=",
+                    "Player.PointY(\"WingLeft\")"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "PlayerWingRight",
+                    "=",
+                    "Player.PointX(\"WingRight\")",
+                    "=",
+                    "Player.PointY(\"WingRight\")"
                   ]
                 }
               ]
@@ -2100,7 +2696,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Camera",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -2116,7 +2711,7 @@
               "parameters": [
                 "",
                 "=",
-                "lerp(Player.X() / 1.5, CameraCenterX(), exp(-LerpDecay* TimeDelta()))",
+                "lerp(Player.X() / 1.5 + Player.CamShake[0], CameraCenterX(), exp(-LerpDecay* TimeDelta()))",
                 "",
                 ""
               ]
@@ -2128,7 +2723,18 @@
               "parameters": [
                 "",
                 "=",
-                "lerp(min(Player.Y(), 0), CameraCenterY(), exp(-LerpDecay* TimeDelta()))",
+                "lerp(min(Player.Y() + Player.CamShake[1], 0), CameraCenterY(), exp(-LerpDecay* TimeDelta()))",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ZoomCamera"
+              },
+              "parameters": [
+                "",
+                "1 + Player.Tween::Value(\"CamZoom\")",
                 "",
                 ""
               ]
@@ -2539,6 +3145,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Bullet",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -3173,18 +3780,32 @@
       ],
       "effects": [
         {
-          "effectType": "Scene3D::HemisphereLight",
-          "name": "3D Light",
+          "effectType": "Adjustment",
+          "name": "Adjustment",
           "doubleParameters": {
-            "elevation": 45,
-            "intensity": 1,
-            "rotation": 0
+            "alpha": 1,
+            "blue": 1,
+            "brightness": 1,
+            "contrast": 1,
+            "gamma": 1,
+            "green": 1,
+            "red": 1,
+            "saturation": 1
           },
-          "stringParameters": {
-            "groundColor": "64;64;64",
-            "skyColor": "255;255;255",
-            "top": "Y-"
+          "stringParameters": {},
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "ZoomBlur",
+          "name": "ZoomBlur",
+          "doubleParameters": {
+            "centerX": 0.5,
+            "centerY": 0.5,
+            "innerRadius": 0,
+            "padding": 0,
+            "strength": 0
           },
+          "stringParameters": {},
           "booleanParameters": {}
         }
       ]
@@ -3204,23 +3825,7 @@
       "renderingType": "",
       "visibility": true,
       "cameras": [],
-      "effects": [
-        {
-          "effectType": "Scene3D::HemisphereLight",
-          "name": "3D Light",
-          "doubleParameters": {
-            "elevation": 45,
-            "intensity": 1,
-            "rotation": 0
-          },
-          "stringParameters": {
-            "groundColor": "64;64;64",
-            "skyColor": "255;255;255",
-            "top": "Y-"
-          },
-          "booleanParameters": {}
-        }
-      ]
+      "effects": []
     }
   ],
   "behaviorsSharedData": [
