@@ -114,6 +114,46 @@
         "name": "_bullet",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/Just a box.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Just a box",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Just a box2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Just a box2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/_bullet2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "_bullet2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/_bullet3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "_bullet3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Just a box.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Just a box.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []

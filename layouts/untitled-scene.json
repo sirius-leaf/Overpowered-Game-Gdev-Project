@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.4950840073748892,
+    "zoomFactor": 0.49508400737488956,
     "windowMask": false
   },
   "objectsGroups": [
@@ -26,10 +26,44 @@
       "name": "EnemyProjectile",
       "objects": [
         {
+          "name": "TurretBullet"
+        },
+        {
+          "name": "TurretRocket"
+        },
+        {
           "name": "EnemyBullet"
         },
         {
           "name": "EnemyRocket"
+        }
+      ]
+    },
+    {
+      "name": "EnemyObject",
+      "objects": [
+        {
+          "name": "Enemy"
+        },
+        {
+          "name": "Turret"
+        },
+        {
+          "name": "Wall"
+        },
+        {
+          "name": "MineBomb"
+        }
+      ]
+    },
+    {
+      "name": "Walls",
+      "objects": [
+        {
+          "name": "Wall"
+        },
+        {
+          "name": "ReinforcedWall"
         }
       ]
     }
@@ -72,46 +106,6 @@
       "angle": 0,
       "customSize": true,
       "depth": 1,
-      "height": 151,
-      "keepRatio": true,
-      "layer": "",
-      "name": "Box",
-      "persistentUuid": "b93a8fd2-1681-48dd-877d-c6dbe36cfaf8",
-      "width": 275,
-      "x": -211,
-      "y": -381,
-      "zOrder": 2,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 0,
-      "height": 128,
-      "keepRatio": true,
-      "layer": "",
-      "name": "Turret",
-      "persistentUuid": "ceae9ee6-2496-4b0b-95e8-662cfd03d9fc",
-      "width": 128,
-      "x": 479,
-      "y": -531,
-      "zOrder": 3,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "name": "TurretType",
-          "type": "number",
-          "value": 2
-        }
-      ]
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 1,
       "height": 694,
       "keepRatio": true,
       "layer": "UI",
@@ -137,6 +131,57 @@
       "x": 0,
       "y": 0,
       "zOrder": 5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 64,
+      "keepRatio": true,
+      "layer": "",
+      "name": "MineBomb",
+      "persistentUuid": "0fac7d68-4d02-4b4f-a4ac-eae1e33de831",
+      "width": 64,
+      "x": -724,
+      "y": -516,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 128,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "6c626305-767f-4665-bdce-361565250e60",
+      "width": 128,
+      "x": 12,
+      "y": -384,
+      "zOrder": 9,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 128,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "eed17dde-fd75-4aba-b87b-911c000541a9",
+      "width": 128,
+      "x": 252,
+      "y": -264,
+      "zOrder": 10,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -166,11 +211,6 @@
           "children": [
             {
               "name": "angle",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "force",
               "type": "number",
               "value": 0
             }
@@ -230,6 +270,10 @@
           "movementAngleOffset": 0,
           "rotateObject": false,
           "viewpoint": "TopDown"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
         }
       ],
       "animations": [
@@ -529,7 +573,7 @@
     {
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
-      "name": "EnemyBullet",
+      "name": "TurretBullet",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -634,7 +678,7 @@
     {
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
-      "name": "EnemyRocket",
+      "name": "TurretRocket",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -769,6 +813,608 @@
         "g": 255,
         "b": 255
       }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "MineBomb",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Just a box.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ExplosionActive",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Just a box",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Just a box2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 1000,
+      "emitterForceMin": 500,
+      "flow": 10000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 300,
+      "name": "MineExplosionParticle",
+      "particleAlpha1": 255,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 255,
+      "particleBlue2": 255,
+      "particleColor1": "255;255;255",
+      "particleColor2": "255;255;255",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 255,
+      "particleGreen2": 255,
+      "particleLifeTimeMax": 1.5,
+      "particleLifeTimeMin": 0.5,
+      "particleRed1": 255,
+      "particleRed2": 255,
+      "particleSize1": 100,
+      "particleSize2": 0,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 64,
+      "rendererParam2": 1,
+      "rendererType": "Point",
+      "tank": 10,
+      "textureParticleName": "",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 1,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "Enemy",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "RotateSpeed",
+          "type": "number",
+          "value": 90
+        },
+        {
+          "name": "EnemyType",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "MoveSpeed",
+          "type": "number",
+          "value": 500
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "isFolded": true,
+          "name": "FireBullet",
+          "type": "FireBullet::FireBullet",
+          "FireCooldown": 1.5,
+          "HasJustFired": false,
+          "RotateBullet": true,
+          "FiringArc": 45,
+          "BulletQuantity": 1,
+          "AngleVariance": 5,
+          "BulletSpeedVariance": 0,
+          "AmmoQuantity": 0,
+          "ShotsPerReload": 0,
+          "ReloadDuration": 1,
+          "MaxAmmo": 0,
+          "ShotsBeforeNextReload": 0,
+          "TotalShotsFired": 0,
+          "TotalBulletsCreated": 0,
+          "StartingAmmo": 0,
+          "TotalReloadsCompleted": 0,
+          "UnlimitedAmmo": true,
+          "ReloadInProgress": false,
+          "HeatIncreasePerShot": 0,
+          "HeatLevel": 0,
+          "AutomaticReloading": true,
+          "OverheatDuration": 0,
+          "LinearCoolingRate": 0.1,
+          "ExponentialCoolingRate": 0.3,
+          "BulletLayer": "",
+          "RandomizedAngle": 0
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "_player.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 8
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "EnemyBullet",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "LifeTime",
+          "type": "number",
+          "value": 2
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "_bullet",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "_bullet3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 8
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "EnemyRocket",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "LifeTime",
+          "type": "number",
+          "value": 2
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "_bullet",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "_bullet3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 8
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Depot",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\Just a box.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Wall",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\Just a box.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "ReinforcedWall",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\Just a box.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -786,22 +1432,57 @@
         ]
       },
       {
-        "folderName": "Enemy",
+        "folderName": "EnemyGroup",
         "children": [
+          {
+            "folderName": "Enemy",
+            "children": [
+              {
+                "folderName": "Bullet",
+                "children": [
+                  {
+                    "objectName": "EnemyBullet"
+                  },
+                  {
+                    "objectName": "EnemyRocket"
+                  }
+                ]
+              },
+              {
+                "objectName": "Enemy"
+              }
+            ]
+          },
+          {
+            "folderName": "MineBomb",
+            "children": [
+              {
+                "objectName": "MineExplosionParticle"
+              },
+              {
+                "objectName": "MineBomb"
+              }
+            ]
+          },
           {
             "folderName": "Turret",
             "children": [
               {
-                "objectName": "EnemyBullet"
-              },
-              {
-                "objectName": "EnemyRocket"
+                "folderName": "Bullet",
+                "children": [
+                  {
+                    "objectName": "TurretLaserPainter"
+                  },
+                  {
+                    "objectName": "TurretRocket"
+                  },
+                  {
+                    "objectName": "TurretBullet"
+                  }
+                ]
               },
               {
                 "objectName": "Turret"
-              },
-              {
-                "objectName": "TurretLaserPainter"
               }
             ]
           }
@@ -820,6 +1501,15 @@
             "objectName": "Player"
           }
         ]
+      },
+      {
+        "objectName": "Depot"
+      },
+      {
+        "objectName": "Wall"
+      },
+      {
+        "objectName": "ReinforcedWall"
       }
     ]
   },
@@ -901,6 +1591,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Player",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -910,7 +1601,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Control",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1011,6 +1701,32 @@
                   "parameters": [
                     "Player",
                     "TopDownMovement"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"r\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "CurrentSceneName()",
+                    ""
                   ]
                 }
               ]
@@ -1203,17 +1919,6 @@
             },
             {
               "type": {
-                "value": "AddForceAL"
-              },
-              "parameters": [
-                "Player",
-                "Player.Recoil.angle",
-                "Player.Recoil.force",
-                ""
-              ]
-            },
-            {
-              "type": {
                 "value": "TextContainerCapability::TextContainerBehavior::SetValue"
               },
               "parameters": [
@@ -1222,38 +1927,19 @@
                 "=",
                 "Player.Health"
               ]
+            },
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "Player",
+                "Walls",
+                ""
+              ]
             }
           ],
           "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "NumberObjectVariable"
-                  },
-                  "parameters": [
-                    "Player",
-                    "Recoil.force",
-                    ">",
-                    "0"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "Player",
-                    "Recoil.force",
-                    "=",
-                    "max(0, Player.Recoil.force - 4000 * TimeDelta())"
-                  ]
-                }
-              ]
-            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -1314,20 +2000,42 @@
                   },
                   "parameters": [
                     "Player",
-                    "Recoil.force",
+                    "Recoil.angle",
                     "=",
-                    "2000"
+                    "Player.Angle() + 180"
                   ]
                 },
                 {
                   "type": {
-                    "value": "SetNumberObjectVariable"
+                    "value": "Tween::TweenBehavior::AddObjectValueTween"
                   },
                   "parameters": [
                     "Player",
-                    "Recoil.angle",
-                    "=",
-                    "Player.Angle() + 180"
+                    "Tween",
+                    "\"Force\"",
+                    "2000",
+                    "0",
+                    "\"linear\"",
+                    "0.5",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Player.Recoil.angle",
+                    "Player.Tween::Value(\"Force\")",
+                    ""
                   ]
                 }
               ]
@@ -1531,7 +2239,7 @@
                         "FireBullet",
                         "Turret.X()",
                         "Turret.Y()",
-                        "EnemyBullet",
+                        "TurretBullet",
                         "Turret.Angle()",
                         "1500",
                         ""
@@ -1564,7 +2272,7 @@
                         "FireBullet",
                         "Turret.X()",
                         "Turret.Y()",
-                        "EnemyRocket",
+                        "TurretRocket",
                         "Turret.Angle()",
                         "0",
                         ""
@@ -1822,45 +2530,6 @@
               "value": 5000
             }
           ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "Turret",
-                "Bullet",
-                "",
-                "",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "Bullet",
-                "CollisionAmount",
-                "+",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "Turret",
-                ""
-              ]
-            }
-          ]
         }
       ],
       "parameters": []
@@ -1870,7 +2539,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Bullet",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1895,7 +2563,7 @@
                 "value": "SetNumberObjectVariable"
               },
               "parameters": [
-                "EnemyBullet",
+                "EnemyProjectile",
                 "LifeTime",
                 "-",
                 "TimeDelta()"
@@ -1903,13 +2571,14 @@
             },
             {
               "type": {
-                "value": "SetNumberObjectVariable"
+                "value": "RotateTowardPosition"
               },
               "parameters": [
-                "EnemyRocket",
-                "LifeTime",
-                "-",
-                "TimeDelta()"
+                "TurretRocket",
+                "Player.X()",
+                "Player.Y()",
+                "30",
+                ""
               ]
             },
             {
@@ -1929,6 +2598,17 @@
                 "value": "AddForceAL"
               },
               "parameters": [
+                "TurretRocket",
+                "TurretRocket.Angle()",
+                "500",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "AddForceAL"
+              },
+              "parameters": [
                 "EnemyRocket",
                 "EnemyRocket.Angle()",
                 "500",
@@ -1937,6 +2617,45 @@
             }
           ],
           "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    "EnemyObject",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    "CollisionAmount",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "EnemyObject",
+                    ""
+                  ]
+                }
+              ]
+            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -1967,6 +2686,18 @@
                         ">=",
                         "5"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Bullet",
+                        "ReinforcedWall",
+                        "",
+                        "",
+                        ""
+                      ]
                     }
                   ]
                 }
@@ -1991,7 +2722,7 @@
                     "value": "NumberObjectVariable"
                   },
                   "parameters": [
-                    "EnemyBullet",
+                    "EnemyProjectile",
                     "LifeTime",
                     "<=",
                     "0"
@@ -2004,7 +2735,239 @@
                     "value": "Delete"
                   },
                   "parameters": [
-                    "EnemyBullet",
+                    "EnemyProjectile",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Mine Bomb",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Distance"
+              },
+              "parameters": [
+                "MineBomb",
+                "Player",
+                "300",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+              },
+              "parameters": [
+                "MineBomb",
+                "Animation",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "MineExplosionParticle",
+                "MineBomb.X()",
+                "MineBomb.Y()",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "MineBomb",
+                    "Player",
+                    "300",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "ExplosionForce",
+                    "=",
+                    "(300 - MineBomb.Distance(Player)) / 300"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectValueTween"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Tween",
+                    "\"Force\"",
+                    "(1 - pow(ExplosionForce - 1, 6)) * 2000",
+                    "0",
+                    "\"linear\"",
+                    "0.5",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Recoil.angle",
+                    "=",
+                    "MineBomb.AngleToObject(Player)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "MineBomb",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "variables": [
+            {
+              "name": "ExplosionForce",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Enemy",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Distance"
+              },
+              "parameters": [
+                "Enemy",
+                "Player",
+                "1500",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "RotateTowardPosition"
+              },
+              "parameters": [
+                "Enemy",
+                "Player.X()",
+                "Player.Y()",
+                "Enemy.RotateSpeed",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "Enemy",
+                "Enemy",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "Player",
+                    "300",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "Enemy.Angle()",
+                    "Enemy.MoveSpeed * clamp((Enemy.Distance(Player) - 300) / 50, 0, 1)",
                     ""
                   ]
                 }
@@ -2015,26 +2978,164 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "NumberObjectVariable"
+                    "value": "Raycast"
                   },
                   "parameters": [
-                    "EnemyRocket",
-                    "LifeTime",
-                    "<=",
-                    "0"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "EnemyRocket",
+                    "Player",
+                    "Enemy.X()",
+                    "Enemy.Y()",
+                    "Enemy.Angle()",
+                    "5000",
+                    "CollisionPos[0]",
+                    "CollisionPos[1]",
                     ""
                   ]
                 }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "EnemyType",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::Fire"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "FireBullet",
+                        "Enemy.X()",
+                        "Enemy.Y()",
+                        "EnemyBullet",
+                        "Enemy.Angle()",
+                        "1000",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "EnemyType",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::Fire"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "FireBullet",
+                        "Enemy.X()",
+                        "Enemy.Y()",
+                        "EnemyRocket",
+                        "Enemy.Angle()",
+                        "0",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Depot",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Depot",
+                "Bullet",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "Bullet",
+                "CollisionAmount",
+                "+",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Depot",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "CurrentSceneName()",
+                "yes"
               ]
             }
           ]
