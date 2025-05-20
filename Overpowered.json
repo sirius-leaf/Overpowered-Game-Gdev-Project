@@ -202,6 +202,54 @@
         "name": "Bullet.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "BulletTurret.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "BulletTurret.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "TurretBullet.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "TurretBullet.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "RocketTurret.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "RocketTurret.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "TurretRocket.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "TurretRocket.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "LaserTurret.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "LaserTurret.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "PlayerCharge2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PlayerCharge2.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
