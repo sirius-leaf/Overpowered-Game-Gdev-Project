@@ -250,6 +250,110 @@
         "name": "PlayerCharge2.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "EnemyBullet.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "EnemyBullet.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "EnemyBullet2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "EnemyBullet2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "EnemyRocket.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "EnemyRocket.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "EnemyRocket (2).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "EnemyRocket (2).png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Wall.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Wall.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "WallBig.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "WallBig.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "ReimforcedWall.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ReimforcedWall.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "ReinforcedWallBig.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ReinforcedWallBig.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Minebomb0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Minebomb0.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Minebomb02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Minebomb02.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Minebomb1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Minebomb1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "DepotGlow.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "DepotGlow.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Depot.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Depot.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []

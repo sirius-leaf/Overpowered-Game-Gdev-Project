@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.3673257545058858,
+    "zoomFactor": 0.6897782140104568,
     "windowMask": false
   },
   "objectsGroups": [
@@ -87,6 +87,7 @@
   ],
   "variables": [
     {
+      "folded": true,
       "name": "CollisionPos",
       "type": "array",
       "children": [
@@ -99,6 +100,30 @@
           "value": 0
         }
       ]
+    },
+    {
+      "name": "DepotDestroyed",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "DepotDestructionPos",
+      "type": "array",
+      "children": [
+        {
+          "type": "number",
+          "value": 0
+        },
+        {
+          "type": "number",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "DepotCollected",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [
@@ -202,16 +227,16 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "keepRatio": true,
+      "customSize": true,
+      "depth": 1,
+      "height": 500,
       "layer": "",
-      "name": "Turret",
-      "persistentUuid": "bf99c185-e252-42fd-8422-b6e12dae980f",
-      "width": 0,
-      "x": 606,
-      "y": -215,
-      "zOrder": 11,
+      "name": "WorldBorder",
+      "persistentUuid": "602d73bf-2b01-4fb0-a3e4-f7c527748cbd",
+      "width": 500,
+      "x": 0,
+      "y": 365,
+      "zOrder": 14,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -222,12 +247,28 @@
       "height": 0,
       "keepRatio": true,
       "layer": "",
-      "name": "Turret",
-      "persistentUuid": "f72bd7ae-12d9-44ae-8ad1-7c0e8c61abda",
+      "name": "Wall",
+      "persistentUuid": "46fa2c60-2d4a-494d-8ea2-36edd8a70e63",
       "width": 0,
-      "x": -354,
-      "y": -454,
-      "zOrder": 12,
+      "x": -433,
+      "y": -111,
+      "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "69f8294a-7a8e-451a-8f54-376d1e1bb759",
+      "width": 0,
+      "x": -502,
+      "y": -264,
+      "zOrder": 17,
       "numberProperties": [
         {
           "name": "animation",
@@ -243,16 +284,32 @@
       "height": 0,
       "keepRatio": true,
       "layer": "",
-      "name": "Turret",
-      "persistentUuid": "69a33b15-bf0b-4fdc-8344-429b0b106180",
+      "name": "ReinforcedWall",
+      "persistentUuid": "1c238567-6cc8-4d61-8c75-c1d55bf5374c",
       "width": 0,
-      "x": -504,
-      "y": 213,
-      "zOrder": 13,
+      "x": -156,
+      "y": -223,
+      "zOrder": 18,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "fb3bae6e-4e47-468a-995e-6ea6c81f5e09",
+      "width": 0,
+      "x": 34,
+      "y": -292,
+      "zOrder": 18,
       "numberProperties": [
         {
           "name": "animation",
-          "value": 2
+          "value": 1
         }
       ],
       "stringProperties": [],
@@ -260,16 +317,64 @@
     },
     {
       "angle": 0,
-      "customSize": true,
-      "depth": 1,
-      "height": 500,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
       "layer": "",
-      "name": "WorldBorder",
-      "persistentUuid": "602d73bf-2b01-4fb0-a3e4-f7c527748cbd",
-      "width": 500,
-      "x": 0,
-      "y": 365,
-      "zOrder": 14,
+      "name": "MineBomb",
+      "persistentUuid": "16d263e8-9d5e-4de8-b456-7df48b68677b",
+      "width": 0,
+      "x": 618,
+      "y": -212,
+      "zOrder": 19,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "DepotEnergy",
+      "persistentUuid": "888fddd4-e4ba-4299-845b-ab248bcd11e0",
+      "width": 0,
+      "x": 500,
+      "y": 100,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Depot",
+      "persistentUuid": "083b01f1-7a0d-422b-9182-3d26e3cb0c03",
+      "width": 0,
+      "x": 500,
+      "y": 100,
+      "zOrder": -3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "DepotEnergy",
+      "persistentUuid": "4ab06e2f-168b-4c62-bdfb-7b98157ebbc9",
+      "width": 0,
+      "x": 896,
+      "y": 22,
+      "zOrder": 21,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -489,7 +594,7 @@
       ]
     },
     {
-      "adaptCollisionMaskAutomatically": true,
+      "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
       "name": "Bullet",
       "preScale": 2,
@@ -537,20 +642,16 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 30,
-                        "y": 29
+                        "x": 31,
+                        "y": 27
                       },
                       {
-                        "x": 63,
-                        "y": 29
+                        "x": 67,
+                        "y": 39
                       },
                       {
-                        "x": 63,
-                        "y": 49
-                      },
-                      {
-                        "x": 30,
-                        "y": 49
+                        "x": 31,
+                        "y": 51
                       }
                     ]
                   ]
@@ -724,11 +825,11 @@
                       },
                       {
                         "x": 64,
-                        "y": 16
+                        "y": 19
                       },
                       {
                         "x": 64,
-                        "y": 32
+                        "y": 29
                       },
                       {
                         "x": 11,
@@ -777,19 +878,19 @@
                         "y": 24
                       },
                       {
-                        "x": 11,
+                        "x": 12.5,
                         "y": 0
                       },
                       {
                         "x": 64,
-                        "y": 16
+                        "y": 21
                       },
                       {
                         "x": 64,
-                        "y": 32
+                        "y": 27
                       },
                       {
-                        "x": 11,
+                        "x": 12,
                         "y": 48
                       }
                     ]
@@ -1069,6 +1170,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "MineBomb",
+      "preScale": 2,
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
@@ -1085,7 +1187,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Just a box.png",
+                  "image": "Minebomb0.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1101,20 +1203,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 14,
+                        "y": 13
                       },
                       {
-                        "x": 32,
-                        "y": 0
+                        "x": 46,
+                        "y": 13
                       },
                       {
-                        "x": 32,
-                        "y": 32
+                        "x": 46,
+                        "y": 45
                       },
                       {
-                        "x": 0,
-                        "y": 32
+                        "x": 14,
+                        "y": 45
                       }
                     ]
                   ]
@@ -1134,7 +1236,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Just a box",
+                  "image": "Minebomb1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1150,27 +1252,27 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 14,
+                        "y": 13
                       },
                       {
-                        "x": 32,
-                        "y": 0
+                        "x": 46,
+                        "y": 13
                       },
                       {
-                        "x": 32,
-                        "y": 32
+                        "x": 46,
+                        "y": 45
                       },
                       {
-                        "x": 0,
-                        "y": 32
+                        "x": 14,
+                        "y": 45
                       }
                     ]
                   ]
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Just a box2",
+                  "image": "Minebomb02.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1186,20 +1288,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 14,
+                        "y": 13
                       },
                       {
-                        "x": 32,
-                        "y": 0
+                        "x": 46,
+                        "y": 13
                       },
                       {
-                        "x": 32,
-                        "y": 32
+                        "x": 46,
+                        "y": 45
                       },
                       {
-                        "x": 0,
-                        "y": 32
+                        "x": 14,
+                        "y": 45
                       }
                     ]
                   ]
@@ -1261,6 +1363,7 @@
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
       "name": "Enemy",
+      "preScale": 2,
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -1268,11 +1371,6 @@
           "name": "RotateSpeed",
           "type": "number",
           "value": 90
-        },
-        {
-          "name": "EnemyType",
-          "type": "number",
-          "value": 0
         },
         {
           "name": "MoveSpeed",
@@ -1316,7 +1414,7 @@
       ],
       "animations": [
         {
-          "name": "",
+          "name": "Bullet",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -1325,12 +1423,18 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "_player.png",
-                  "points": [],
+                  "image": "EnemyBullet.png",
+                  "points": [
+                    {
+                      "name": "Bullet",
+                      "x": 32,
+                      "y": 16
+                    }
+                  ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 8,
-                    "y": 8
+                    "x": 16,
+                    "y": 16
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1345,12 +1449,70 @@
                         "y": 0
                       },
                       {
-                        "x": 16,
-                        "y": 8
+                        "x": 32,
+                        "y": 14
+                      },
+                      {
+                        "x": 32,
+                        "y": 18
                       },
                       {
                         "x": 0,
-                        "y": 16
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Rocket",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "EnemyRocket.png",
+                  "points": [
+                    {
+                      "name": "Bullet",
+                      "x": 32,
+                      "y": 16
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 11
+                      },
+                      {
+                        "x": 32,
+                        "y": 21
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
                       }
                     ]
                   ]
@@ -1365,6 +1527,7 @@
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
       "name": "EnemyBullet",
+      "preScale": 2,
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -1388,12 +1551,12 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "_bullet3",
+                  "image": "EnemyBullet2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 16,
-                    "y": 8
+                    "x": 24,
+                    "y": 23
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1404,16 +1567,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 22,
+                        "y": 23
                       },
                       {
-                        "x": 32,
-                        "y": 8
+                        "x": 24,
+                        "y": 21
                       },
                       {
-                        "x": 0,
-                        "y": 16
+                        "x": 26,
+                        "y": 23
+                      },
+                      {
+                        "x": 24,
+                        "y": 25
                       }
                     ]
                   ]
@@ -1428,6 +1595,7 @@
       "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
       "name": "EnemyRocket",
+      "preScale": 2,
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -1451,12 +1619,12 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "_bullet3",
+                  "image": "EnemyRocket (2).png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 16,
-                    "y": 8
+                    "x": 27.5,
+                    "y": 26
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1467,16 +1635,16 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 22,
+                        "y": 23
                       },
                       {
-                        "x": 32,
-                        "y": 8
+                        "x": 35,
+                        "y": 26
                       },
                       {
-                        "x": 0,
-                        "y": 16
+                        "x": 22,
+                        "y": 29
                       }
                     ]
                   ]
@@ -1488,14 +1656,20 @@
       ]
     },
     {
-      "adaptCollisionMaskAutomatically": true,
+      "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
-      "name": "Depot",
+      "name": "DepotEnergy",
+      "preScale": 2,
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
       "animations": [
         {
           "name": "",
@@ -1507,12 +1681,12 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\Just a box.png",
+                  "image": "DepotGlow.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 0,
-                    "y": 0
+                    "x": 79,
+                    "y": 78
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1523,20 +1697,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 0
+                        "x": 57,
+                        "y": 78
                       },
                       {
-                        "x": 32,
-                        "y": 0
+                        "x": 79,
+                        "y": 57
                       },
                       {
-                        "x": 32,
-                        "y": 32
+                        "x": 100,
+                        "y": 78
                       },
                       {
-                        "x": 0,
-                        "y": 32
+                        "x": 79,
+                        "y": 99
                       }
                     ]
                   ]
@@ -1548,9 +1722,10 @@
       ]
     },
     {
-      "adaptCollisionMaskAutomatically": true,
+      "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
       "name": "Wall",
+      "preScale": 2,
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
@@ -1558,7 +1733,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "Normal",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -1567,7 +1742,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\Just a box.png",
+                  "image": "Wall.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1604,21 +1779,9 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "adaptCollisionMaskAutomatically": true,
-      "assetStoreId": "",
-      "name": "ReinforcedWall",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "animations": [
+        },
         {
-          "name": "",
+          "name": "Big",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -1627,7 +1790,68 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\Just a box.png",
+                  "image": "WallBig.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "ReinforcedWall",
+      "preScale": 2,
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Normal",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "ReimforcedWall.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1657,6 +1881,54 @@
                       {
                         "x": 0,
                         "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Big",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "ReinforcedWallBig.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 64
+                      },
+                      {
+                        "x": 0,
+                        "y": 64
                       }
                     ]
                   ]
@@ -1934,6 +2206,67 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Depot",
+      "preScale": 2,
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Depot.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 72,
+                        "y": 0
+                      },
+                      {
+                        "x": 72,
+                        "y": 72
+                      },
+                      {
+                        "x": 0,
+                        "y": 72
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -2036,7 +2369,15 @@
         ]
       },
       {
-        "objectName": "Depot"
+        "folderName": "Depot",
+        "children": [
+          {
+            "objectName": "DepotEnergy"
+          },
+          {
+            "objectName": "Depot"
+          }
+        ]
       },
       {
         "objectName": "Wall"
@@ -2074,65 +2415,66 @@
             "",
             ""
           ]
+        },
+        {
+          "type": {
+            "value": "ScalableCapability::ScalableBehavior::SetValue"
+          },
+          "parameters": [
+            "PlayerCharge",
+            "Scale",
+            "=",
+            "0.00001"
+          ]
+        },
+        {
+          "type": {
+            "value": "ChangePlan"
+          },
+          "parameters": [
+            "DepotEnergy",
+            "=",
+            "-3"
+          ]
+        },
+        {
+          "type": {
+            "value": "ChangePlan"
+          },
+          "parameters": [
+            "Depot",
+            "=",
+            "-4"
+          ]
         }
       ],
       "events": [
         {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "folded": true,
-          "name": "Turret",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::Index"
-                  },
-                  "parameters": [
-                    "Turret",
-                    "Animation",
-                    "=",
-                    "1"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "FireBullet::FireBullet::SetCooldownOp"
-                  },
-                  "parameters": [
-                    "Turret",
-                    "FireBullet",
-                    "=",
-                    "2.5",
-                    ""
-                  ]
-                }
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::Index"
+              },
+              "parameters": [
+                "Turret",
+                "Animation",
+                "=",
+                "1"
               ]
             }
           ],
-          "parameters": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
           "actions": [
             {
               "type": {
-                "value": "ScalableCapability::ScalableBehavior::SetValue"
+                "value": "FireBullet::FireBullet::SetCooldownOp"
               },
               "parameters": [
-                "PlayerCharge",
-                "Scale",
+                "Turret",
+                "FireBullet",
                 "=",
-                "0.00001"
+                "2.5",
+                ""
               ]
             }
           ]
@@ -2784,7 +3126,7 @@
                 "DebugText",
                 "Text",
                 "=",
-                "Player.Health"
+                "Player.Health + NewLine() + DepotCollected"
               ]
             },
             {
@@ -2967,40 +3309,110 @@
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "value": "SetCameraCenterX"
-              },
-              "parameters": [
-                "",
-                "=",
-                "lerp(Player.X() / 1.5 + Player.CamShake[0], CameraCenterX(), exp(-LerpDecay* TimeDelta()))",
-                "",
-                ""
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DepotDestroyed",
+                    "=",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetCameraCenterX"
+                  },
+                  "parameters": [
+                    "",
+                    "=",
+                    "lerp(Player.X() / 1.5 + Player.CamShake[0], CameraCenterX(), exp(-LerpDecay* TimeDelta()))",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetCameraCenterY"
+                  },
+                  "parameters": [
+                    "",
+                    "=",
+                    "lerp(min(Player.Y() + Player.CamShake[1], 0), CameraCenterY(), exp(-LerpDecay* TimeDelta()))",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ZoomCamera"
+                  },
+                  "parameters": [
+                    "",
+                    "1 + Player.Tween::Value(\"CamZoom\")",
+                    "",
+                    ""
+                  ]
+                }
               ]
             },
             {
-              "type": {
-                "value": "SetCameraCenterY"
-              },
-              "parameters": [
-                "",
-                "=",
-                "lerp(min(Player.Y() + Player.CamShake[1], 0), CameraCenterY(), exp(-LerpDecay* TimeDelta()))",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "ZoomCamera"
-              },
-              "parameters": [
-                "",
-                "1 + Player.Tween::Value(\"CamZoom\")",
-                "",
-                ""
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DepotDestroyed",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetCameraCenterX"
+                  },
+                  "parameters": [
+                    "",
+                    "=",
+                    "lerp(DepotDestructionPos[0], CameraCenterX(), exp(-LerpDecay * TimeDelta()))",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetCameraCenterY"
+                  },
+                  "parameters": [
+                    "",
+                    "=",
+                    "lerp(DepotDestructionPos[1], CameraCenterY(), exp(-LerpDecay * TimeDelta()))",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ZoomCamera"
+                  },
+                  "parameters": [
+                    "",
+                    "1",
+                    "",
+                    ""
+                  ]
+                }
               ]
             }
           ],
@@ -3704,7 +4116,18 @@
                   "parameters": [
                     "ExplosionForce",
                     "=",
-                    "(300 - MineBomb.Distance(Player)) / 300"
+                    "1 - pow((300 - MineBomb.Distance(Player)) / 300 - 1, 6)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "-",
+                    "round(ExplosionForce * 5)"
                   ]
                 },
                 {
@@ -3715,7 +4138,7 @@
                     "Player",
                     "Tween",
                     "\"Force\"",
-                    "(1 - pow(ExplosionForce - 1, 6)) * 2000",
+                    "ExplosionForce * 2000",
                     "0",
                     "\"linear\"",
                     "0.5",
@@ -3824,7 +4247,7 @@
                   "parameters": [
                     "Enemy",
                     "Player",
-                    "300",
+                    "400",
                     ""
                   ]
                 }
@@ -3837,7 +4260,7 @@
                   "parameters": [
                     "Enemy",
                     "Enemy.Angle()",
-                    "Enemy.MoveSpeed * clamp((Enemy.Distance(Player) - 300) / 50, 0, 1)",
+                    "Enemy.MoveSpeed * clamp((Enemy.Distance(Player) - 400) / 50, 0, 1)",
                     ""
                   ]
                 }
@@ -3869,11 +4292,11 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "NumberObjectVariable"
+                        "value": "AnimatableCapability::AnimatableBehavior::Index"
                       },
                       "parameters": [
                         "Enemy",
-                        "EnemyType",
+                        "Animation",
                         "=",
                         "0"
                       ]
@@ -3887,11 +4310,11 @@
                       "parameters": [
                         "Enemy",
                         "FireBullet",
-                        "Enemy.X()",
-                        "Enemy.Y()",
+                        "Enemy.PointX(\"Bullet\")",
+                        "Enemy.PointY(\"Bullet\")",
                         "EnemyBullet",
                         "Enemy.Angle()",
-                        "1000",
+                        "500",
                         ""
                       ]
                     }
@@ -3902,11 +4325,11 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "NumberObjectVariable"
+                        "value": "AnimatableCapability::AnimatableBehavior::Index"
                       },
                       "parameters": [
                         "Enemy",
-                        "EnemyType",
+                        "Animation",
                         "=",
                         "1"
                       ]
@@ -3942,70 +4365,280 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Depot",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "Depot",
-                "Bullet",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
+          "conditions": [],
           "actions": [
             {
               "type": {
-                "value": "SetNumberObjectVariable"
+                "value": "Rotate"
               },
               "parameters": [
-                "Bullet",
-                "CollisionAmount",
-                "+",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "Depot",
+                "DepotEnergy",
+                "90 + DepotEnergy.Tween::Value(\"Spin\")",
                 ""
               ]
-            },
+            }
+          ],
+          "events": [
             {
-              "type": {
-                "value": "Wait"
-              },
-              "parameters": [
-                "1"
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "DepotEnergy",
+                    "Bullet",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "DepotDestroyed",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "DepotDestructionPos[0]",
+                    "=",
+                    "DepotEnergy.X()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "DepotDestructionPos[1]",
+                    "=",
+                    "DepotEnergy.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetLayerEffectParameter"
+                  },
+                  "parameters": [
+                    "",
+                    "",
+                    "\"Adjustment\"",
+                    "\"saturation\"",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "DepotEnergy",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "CurrentSceneName()",
+                    "yes"
+                  ]
+                }
               ]
             },
             {
-              "type": {
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "CurrentSceneName()",
-                "yes"
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "DepotEnergy",
+                    "Player",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectValueTween"
+                  },
+                  "parameters": [
+                    "DepotEnergy",
+                    "Tween",
+                    "\"Spin\"",
+                    "DepotEnergy.Tween::Value(\"Spin\")",
+                    "720",
+                    "\"linear\"",
+                    "2",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "DepotEnergy",
+                    "\"Collect\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "DepotEnergy",
+                    "Player",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectValueTween"
+                  },
+                  "parameters": [
+                    "DepotEnergy",
+                    "Tween",
+                    "\"Spin\"",
+                    "DepotEnergy.Tween::Value(\"Spin\")",
+                    "0",
+                    "\"easeOutExpo\"",
+                    "1",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "RemoveObjectTimer"
+                  },
+                  "parameters": [
+                    "DepotEnergy",
+                    "\"Collect\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "DepotEnergy",
+                    "Player",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "DepotEnergy",
+                    "\"Collect\"",
+                    ">=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "DepotCollected",
+                    "+",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "RemoveObjectTimer"
+                  },
+                  "parameters": [
+                    "DepotEnergy",
+                    "\"Collect\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "DepotEnergy",
+                    ""
+                  ]
+                }
               ]
             }
           ]
