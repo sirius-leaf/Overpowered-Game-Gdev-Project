@@ -42,6 +42,17 @@
         },
         {
           "type": {
+            "value": "ZoomCamera"
+          },
+          "parameters": [
+            "",
+            "0.6",
+            "",
+            ""
+          ]
+        },
+        {
+          "type": {
             "value": "ScalableCapability::ScalableBehavior::SetValue"
           },
           "parameters": [
@@ -118,6 +129,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Player",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -326,28 +338,6 @@
                     },
                     {
                       "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Player",
-                        "CamShake[0]",
-                        "=",
-                        "cos(TimeFromStart() * 40.4494897427) * 60 * Player.Tween::Value(\"CamShake\")"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Player",
-                        "CamShake[1]",
-                        "=",
-                        "sin(TimeFromStart() * 80.4142135623) * 60 * Player.Tween::Value(\"CamShake\")"
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "SetCameraAngle"
                       },
                       "parameters": [
@@ -365,6 +355,18 @@
                       "parameters": [
                         "",
                         "",
+                        "\"ZoomBlur\"",
+                        "\"strength\"",
+                        "Player.Tween::Value(\"CamShake\") * 0.6"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetLayerEffectParameter"
+                      },
+                      "parameters": [
+                        "",
+                        "\"GroundTile\"",
                         "\"ZoomBlur\"",
                         "\"strength\"",
                         "Player.Tween::Value(\"CamShake\") * 0.6"
@@ -583,6 +585,17 @@
                     },
                     {
                       "type": {
+                        "value": "Tween::StopTween"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Tween",
+                        "\"CamShake\"",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "Tween::TweenBehavior::AddObjectVariableTween3"
                       },
                       "parameters": [
@@ -679,6 +692,18 @@
                       },
                       "parameters": [
                         "",
+                        "\"GroundTile\"",
+                        "\"ZoomBlur\"",
+                        "\"strength\"",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetLayerEffectParameter"
+                      },
+                      "parameters": [
+                        "",
                         "",
                         "\"Adjustment\"",
                         "\"brightness\"",
@@ -727,6 +752,34 @@
                   },
                   "parameters": [
                     "PlayerGroup"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectValueTween"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Tween",
+                    "\"CamShake\"",
+                    "2.5",
+                    "0",
+                    "\"easeOutSine\"",
+                    "1",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "ExplosionParticle",
+                    "Player.X()",
+                    "Player.Y()",
+                    ""
                   ]
                 },
                 {
@@ -784,6 +837,62 @@
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
+            {
+              "type": {
+                "value": "Tween::IsPlaying"
+              },
+              "parameters": [
+                "Player",
+                "Tween",
+                "\"CamShake\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "CamShake[0]",
+                "=",
+                "cos(TimeFromStart() * 40.4494897427) * ShakeStrength * Player.Tween::Value(\"CamShake\")"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberObjectVariable"
+              },
+              "parameters": [
+                "Player",
+                "CamShake[1]",
+                "=",
+                "sin(TimeFromStart() * 80.4142135623) * ShakeStrength * Player.Tween::Value(\"CamShake\")"
+              ]
+            }
+          ],
+          "variables": [
+            {
+              "name": "ShakeStrength",
+              "type": "number",
+              "value": 70
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "DepotDestroyed",
+                "True",
+                ""
+              ]
+            },
             {
               "type": {
                 "inverted": true,
@@ -986,6 +1095,28 @@
                     "",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "PlayerShootParticle",
+                    "Player.X()",
+                    "Player.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "PlayerShootParticle",
+                    "=",
+                    "Player.Angle()"
+                  ]
                 }
               ]
             }
@@ -999,7 +1130,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Camera",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1012,6 +1142,150 @@
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "IsIntro",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "TimeFromStart()",
+                        ">=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetCameraCenterY"
+                      },
+                      "parameters": [
+                        "",
+                        "-",
+                        "600 * TimeDelta()",
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "CameraCenterY"
+                          },
+                          "parameters": [
+                            "",
+                            "<=",
+                            "IntroMaxY - 600",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "KeyFromTextReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Space\""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetCameraCenterY"
+                      },
+                      "parameters": [
+                        "",
+                        "=",
+                        "0",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ZoomCamera"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "IsIntro",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "HideLayer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Intro UI\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ShowLayer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"UI\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "IsIntro",
+                    "=",
+                    ""
+                  ]
+                },
                 {
                   "type": {
                     "value": "BooleanVariable"
@@ -1108,6 +1382,59 @@
                     "",
                     "1",
                     "",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetCameraCenterX"
+                  },
+                  "parameters": [
+                    "",
+                    "=",
+                    "mod(CameraCenterX(), 128)",
+                    "\"GroundTile\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetCameraCenterY"
+                  },
+                  "parameters": [
+                    "",
+                    "=",
+                    "mod(CameraCenterY(), 128)",
+                    "\"GroundTile\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ZoomCamera"
+                  },
+                  "parameters": [
+                    "",
+                    "CameraZoom()",
+                    "\"GroundTile\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetCameraAngle"
+                  },
+                  "parameters": [
+                    "",
+                    "=",
+                    "CameraAngle()",
+                    "\"GroundTile\"",
                     ""
                   ]
                 }
@@ -1616,13 +1943,23 @@
               "actions": [
                 {
                   "type": {
-                    "value": "SetNumberObjectVariable"
+                    "value": "Delete"
                   },
                   "parameters": [
                     "Bullet",
-                    "CollisionAmount",
-                    "+",
-                    "1"
+                    "CollisionAmount"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "ExplosionParticle",
+                    "EnemyObject.X()",
+                    "EnemyObject.Y()",
+                    ""
                   ]
                 },
                 {
@@ -1654,17 +1991,6 @@
                         "LifeTime",
                         "<=",
                         "0"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Bullet",
-                        "CollisionAmount",
-                        ">=",
-                        "5"
                       ]
                     },
                     {
@@ -2159,6 +2485,18 @@
                 },
                 {
                   "type": {
+                    "value": "SetLayerEffectParameter"
+                  },
+                  "parameters": [
+                    "",
+                    "\"GroundTile\"",
+                    "\"Adjustment\"",
+                    "\"saturation\"",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Delete"
                   },
                   "parameters": [
@@ -2360,6 +2698,17 @@
                 },
                 {
                   "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "+",
+                    "ceil((25 - Player.Health) * 0.7)"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "RemoveObjectTimer"
                   },
                   "parameters": [
@@ -2388,7 +2737,7 @@
                   "parameters": [
                     "DepotCollected",
                     ">=",
-                    "1"
+                    "5"
                   ]
                 },
                 {
@@ -2517,6 +2866,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "UI",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -2591,6 +2941,301 @@
               "name": "LerpDecay",
               "type": "number",
               "value": 10
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "LayerVisible"
+              },
+              "parameters": [
+                "",
+                "\"Pause UI\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Escape\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "MouseButtonFromTextReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Left\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SourisSurObjet"
+                          },
+                          "parameters": [
+                            "Resume",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "HideLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Pause UI\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShowLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"UI\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "Pause",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "MouseButtonFromTextReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Left\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "ExitMission",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "MainMenuCamY",
+                    "=",
+                    "360"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Main Menu\"",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "1"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "LayerVisible"
+              },
+              "parameters": [
+                "",
+                "\"UI\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "Pause",
+                "=",
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "KeyFromTextReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Escape\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "MouseButtonFromTextReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Left\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SourisSurObjet"
+                          },
+                          "parameters": [
+                            "PauseButton",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "HideLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"UI\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShowLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Pause UI\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeTimeScale"
+                  },
+                  "parameters": [
+                    "",
+                    "0"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "Pause",
+                "True",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "Pause",
+                "False",
+                ""
+              ]
             }
           ]
         },
@@ -2748,34 +3393,36 @@
           "actions": [
             {
               "type": {
-                "value": "OpacityCapability::OpacityBehavior::SetValue"
+                "value": "ChangeLayer"
               },
               "parameters": [
                 "BlackScreen",
-                "Opacity",
-                "=",
-                "128"
+                "\"End Game UI\""
               ]
-            },
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
             {
               "type": {
-                "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                "value": "LayerVisible"
+              },
+              "parameters": [
+                "",
+                "\"Pause UI\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeLayer"
               },
               "parameters": [
                 "BlackScreen",
-                "Resizable",
-                "=",
-                "SceneWindowWidth()"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetCenterX"
-              },
-              "parameters": [
-                "CenteredGameUI",
-                "=",
-                "SceneWindowWidth() / 2"
+                "\"Pause UI\""
               ]
             }
           ]

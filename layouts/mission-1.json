@@ -1,8 +1,8 @@
 {
   "b": 56,
   "disableInputWhenNotFocused": true,
-  "mangledName": "Untitled_32scene",
-  "name": "Untitled scene",
+  "mangledName": "Mission_321",
+  "name": "Mission 1",
   "r": 56,
   "standardSortMethod": true,
   "stopSoundsOnStartup": true,
@@ -11,14 +11,14 @@
   "uiSettings": {
     "grid": true,
     "gridType": "rectangular",
-    "gridWidth": 32,
-    "gridHeight": 32,
+    "gridWidth": 64,
+    "gridHeight": 64,
     "gridOffsetX": 0,
     "gridOffsetY": 0,
     "gridColor": 10401023,
     "gridAlpha": 0.1,
     "snap": true,
-    "zoomFactor": 0.4335774304702422,
+    "zoomFactor": 0.4789341884535318,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -75,7 +75,7 @@
     {
       "name": "IntroMaxY",
       "type": "number",
-      "value": -1000
+      "value": -4224
     }
   ],
   "instances": [
@@ -91,23 +91,6 @@
       "x": 0,
       "y": 0,
       "zOrder": 1,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 1,
-      "height": 243,
-      "keepRatio": true,
-      "layer": "UI",
-      "name": "DebugText",
-      "persistentUuid": "abb01046-496a-4c12-9899-2c2f53bdb105",
-      "width": 560,
-      "x": 9,
-      "y": 11,
-      "zOrder": 4,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -253,64 +236,501 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
-    }
-  ],
-  "objects": [
+    },
     {
-      "assetStoreId": "",
-      "bold": false,
-      "italic": false,
-      "name": "DebugText",
-      "smoothed": true,
-      "type": "TextObject::Text",
-      "underlined": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "string": "Text",
-      "font": "",
-      "textAlignment": "left",
-      "characterSize": 20,
-      "color": {
-        "b": 255,
-        "g": 255,
-        "r": 255
-      },
-      "content": {
-        "bold": false,
-        "isOutlineEnabled": false,
-        "isShadowEnabled": false,
-        "italic": false,
-        "outlineColor": "255;255;255",
-        "outlineThickness": 2,
-        "shadowAngle": 90,
-        "shadowBlurRadius": 2,
-        "shadowColor": "0;0;0",
-        "shadowDistance": 4,
-        "shadowOpacity": 127,
-        "smoothed": true,
-        "underlined": false,
-        "text": "Text",
-        "font": "",
-        "textAlignment": "left",
-        "verticalTextAlignment": "top",
-        "characterSize": 20,
-        "color": "255;255;255"
-      }
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "a71c8b17-1715-4755-903e-a8fe994ca54e",
+      "width": 0,
+      "x": 0,
+      "y": -1152,
+      "zOrder": -5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "ba73baa4-2b76-411a-9268-8373eaf3e215",
+      "width": 0,
+      "x": 0,
+      "y": -1152,
+      "zOrder": -4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "021080a7-5422-4aa0-b2f1-8cc88b67f2c7",
+      "width": 0,
+      "x": 896,
+      "y": -1152,
+      "zOrder": -5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "ae10ce4f-1cb3-4dd5-a14b-a4e8edafbc81",
+      "width": 0,
+      "x": 896,
+      "y": -1152,
+      "zOrder": -4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "497ca56a-57d4-4859-a29b-114633efaa8b",
+      "width": 0,
+      "x": -896,
+      "y": -1152,
+      "zOrder": -5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "82d9db16-2d79-4a47-98ed-672ed02a62ad",
+      "width": 0,
+      "x": -896,
+      "y": -1152,
+      "zOrder": -4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Depot",
+      "persistentUuid": "cad2f4f1-a419-4dd1-b9fe-4187f5a84da4",
+      "width": 0,
+      "x": -512,
+      "y": -1408,
+      "zOrder": -8,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "DepotEnergy",
+      "persistentUuid": "56eb5251-59c3-48ac-b5cf-05914b6e7bfa",
+      "width": 0,
+      "x": -512,
+      "y": -1408,
+      "zOrder": -7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "DepotEnergy",
+      "persistentUuid": "49e9e499-a289-41ea-a01e-5c549a92ef36",
+      "width": 0,
+      "x": 512,
+      "y": -1408,
+      "zOrder": -7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Depot",
+      "persistentUuid": "c75a29cd-4db5-41a9-94c6-acc8b4b5cae0",
+      "width": 0,
+      "x": 512,
+      "y": -1408,
+      "zOrder": -9,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "b3bd6d1b-d93b-4aad-bc32-dfb10795e550",
+      "width": 0,
+      "x": -128,
+      "y": -2560,
+      "zOrder": -5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "8d67bc48-2f47-49a7-9dda-c5817b654511",
+      "width": 0,
+      "x": -128,
+      "y": -2560,
+      "zOrder": -4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "eb0f445c-ebc8-4ba1-a839-47e34cc710f6",
+      "width": 0,
+      "x": 128,
+      "y": -2560,
+      "zOrder": -5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "fb1440e9-5d5b-416b-b765-4b13a008de5e",
+      "width": 0,
+      "x": 128,
+      "y": -2560,
+      "zOrder": -4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "DepotEnergy",
+      "persistentUuid": "a081cdf6-2965-4f30-b501-7293b35a8131",
+      "width": 0,
+      "x": 0,
+      "y": -2816,
+      "zOrder": -7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Depot",
+      "persistentUuid": "686051d1-38ea-4c93-adf8-909ce3403412",
+      "width": 0,
+      "x": 0,
+      "y": -2816,
+      "zOrder": -10,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "35b8f0bc-051d-4f66-85a6-b59e8c95d836",
+      "width": 0,
+      "x": 0,
+      "y": -4096,
+      "zOrder": -5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "7ab083ae-4208-4d4e-bb4b-51804e6f8188",
+      "width": 0,
+      "x": 0,
+      "y": -4096,
+      "zOrder": -4,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "9c8fcfec-f491-414f-9591-1fe47f345d3e",
+      "width": 0,
+      "x": 896,
+      "y": -3968,
+      "zOrder": -5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "84a551a7-2102-49ae-b7eb-de1da2dfc7d2",
+      "width": 0,
+      "x": 896,
+      "y": -3968,
+      "zOrder": -4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "c0efa825-3568-4ae0-94f9-47d1ef90399d",
+      "width": 0,
+      "x": -896,
+      "y": -3968,
+      "zOrder": -5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "496e12f1-fb2d-4468-9e5c-9aa2b88ebebd",
+      "width": 0,
+      "x": -896,
+      "y": -3968,
+      "zOrder": -4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "d6ef0fce-fe5a-42ff-92a7-1af323b2efdd",
+      "width": 0,
+      "x": 896,
+      "y": -4224,
+      "zOrder": -5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "240e63f7-bfb9-49e6-b956-e683d06eb625",
+      "width": 0,
+      "x": 896,
+      "y": -4224,
+      "zOrder": -4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "eebd766f-c30f-4243-b67a-8caee008e92a",
+      "width": 0,
+      "x": -896,
+      "y": -4224,
+      "zOrder": -5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "a1b35999-41f3-48f3-9c18-0dd0d9d37dde",
+      "width": 0,
+      "x": -896,
+      "y": -4224,
+      "zOrder": -4,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "DepotEnergy",
+      "persistentUuid": "a2f917ff-3cc7-476a-841f-690b4dbaa779",
+      "width": 0,
+      "x": 512,
+      "y": -3840,
+      "zOrder": -7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Depot",
+      "persistentUuid": "ddcde637-3bdc-4396-95aa-e93f65e0f68e",
+      "width": 0,
+      "x": 512,
+      "y": -3840,
+      "zOrder": -10,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "DepotEnergy",
+      "persistentUuid": "b0e2b11b-3281-4a2b-864b-142ef647a003",
+      "width": 0,
+      "x": -512,
+      "y": -3840,
+      "zOrder": -7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Depot",
+      "persistentUuid": "8e63f7f0-59e0-4b15-bbcb-38530f9addd3",
+      "width": 0,
+      "x": -512,
+      "y": -3840,
+      "zOrder": -10,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
+  "objects": [],
   "objectsFolderStructure": {
-    "folderName": "__ROOT",
-    "children": [
-      {
-        "folderName": "Other",
-        "children": [
-          {
-            "objectName": "DebugText"
-          }
-        ]
-      }
-    ]
+    "folderName": "__ROOT"
   },
   "events": [
     {
@@ -319,50 +739,6 @@
         "includeConfig": 0
       },
       "target": "LevelsEvent"
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
-            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-          },
-          "parameters": [
-            "DebugText",
-            "Text",
-            "=",
-            "ToString(round(1 / TimeDelta()))"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "KeyFromTextPressed"
-          },
-          "parameters": [
-            "",
-            "\"Period\""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetNumberObjectVariable"
-          },
-          "parameters": [
-            "Player",
-            "Health",
-            "=",
-            "0"
-          ]
-        }
-      ]
     }
   ],
   "layers": [

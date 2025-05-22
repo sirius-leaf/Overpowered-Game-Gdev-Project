@@ -23,29 +23,6 @@
   },
   "objectsGroups": [
     {
-      "name": "CenteredUI",
-      "objects": [
-        {
-          "name": "Title"
-        },
-        {
-          "name": "Start"
-        },
-        {
-          "name": "Exit"
-        },
-        {
-          "name": "Mission1"
-        },
-        {
-          "name": "MissionUndefined"
-        },
-        {
-          "name": "SelectMission"
-        }
-      ]
-    },
-    {
       "name": "Button",
       "objects": [
         {
@@ -70,14 +47,14 @@
   "instances": [
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "keepRatio": true,
+      "customSize": true,
+      "depth": 0,
+      "height": 69,
       "layer": "",
       "name": "Title",
       "persistentUuid": "03609537-b53c-4ac7-af1e-4e73e4a941f5",
-      "width": 0,
-      "x": 552,
+      "width": 1280,
+      "x": 0,
       "y": 23,
       "zOrder": 1,
       "numberProperties": [],
@@ -89,12 +66,11 @@
       "customSize": true,
       "depth": 1,
       "height": 91,
-      "keepRatio": true,
       "layer": "",
       "name": "Start",
       "persistentUuid": "738e3def-4638-4ae5-879d-cb56451cdf4c",
-      "width": 223,
-      "x": 500,
+      "width": 224,
+      "x": 528,
       "y": 298,
       "zOrder": 2,
       "numberProperties": [],
@@ -111,7 +87,7 @@
       "name": "Exit",
       "persistentUuid": "af8e0096-ff04-4ca0-951c-7b6f3cf1522c",
       "width": 166,
-      "x": 532,
+      "x": 557,
       "y": 400,
       "zOrder": 3,
       "numberProperties": [],
@@ -140,12 +116,11 @@
       "customSize": true,
       "depth": 1,
       "height": 70,
-      "keepRatio": true,
       "layer": "",
       "name": "Mission1",
       "persistentUuid": "cee3f173-3d09-4caf-9216-a3b00e775ff7",
-      "width": 221,
-      "x": 520,
+      "width": 222,
+      "x": 529,
       "y": -531,
       "zOrder": 6,
       "numberProperties": [],
@@ -157,12 +132,11 @@
       "customSize": true,
       "depth": 1,
       "height": 59,
-      "keepRatio": true,
       "layer": "",
       "name": "MissionUndefined",
       "persistentUuid": "9395e996-698f-430b-a192-5c0cdaf24747",
-      "width": 361,
-      "x": 444,
+      "width": 362,
+      "x": 459,
       "y": -474,
       "zOrder": 7,
       "numberProperties": [],
@@ -174,12 +148,11 @@
       "customSize": true,
       "depth": 1,
       "height": 59,
-      "keepRatio": true,
       "layer": "",
       "name": "MissionUndefined",
       "persistentUuid": "bf38f4fd-ffee-42df-b1f7-3e27570e02e9",
-      "width": 361,
-      "x": 445,
+      "width": 362,
+      "x": 459,
       "y": -409,
       "zOrder": 7,
       "numberProperties": [],
@@ -188,14 +161,14 @@
     },
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "keepRatio": true,
+      "customSize": true,
+      "depth": 0,
+      "height": 69,
       "layer": "",
       "name": "SelectMission",
       "persistentUuid": "1316f44d-2d24-4cf3-8e49-a8c33e459a70",
-      "width": 0,
-      "x": 367,
+      "width": 1280,
+      "x": 0,
       "y": -669,
       "zOrder": 8,
       "numberProperties": [],
@@ -216,9 +189,19 @@
       "effects": [],
       "behaviors": [
         {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 4,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        },
+        {
           "name": "SecretCode",
           "type": "SecretCode::SecretCode",
-          "Code": "r e s e t l e v e l",
+          "Code": "r e s e t m i s s i o n t o z e r o",
           "Count": 0,
           "CodeEntered": false,
           "AcceptingCode": true
@@ -265,7 +248,18 @@
       "underlined": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 4,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
       "string": "Start",
       "font": "",
       "textAlignment": "center",
@@ -307,7 +301,18 @@
       "underlined": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 4,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
       "string": "Exit",
       "font": "",
       "textAlignment": "center",
@@ -433,7 +438,18 @@
       "underlined": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 4,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
       "string": "Mission 1",
       "font": "",
       "textAlignment": "center",
@@ -475,8 +491,19 @@
       "underlined": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
-      "string": "Mission Undefined",
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 4,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
+      "string": "Coming Soon",
       "font": "",
       "textAlignment": "center",
       "characterSize": 40,
@@ -499,7 +526,7 @@
         "shadowOpacity": 127,
         "smoothed": true,
         "underlined": false,
-        "text": "Mission Undefined",
+        "text": "Coming Soon",
         "font": "",
         "textAlignment": "center",
         "verticalTextAlignment": "center",
@@ -517,7 +544,18 @@
       "underlined": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 4,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
       "string": "Select The Mission",
       "font": "",
       "textAlignment": "center",
@@ -611,16 +649,6 @@
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [
-        {
-          "type": {
-            "value": "SetCenterX"
-          },
-          "parameters": [
-            "CenteredUI",
-            "=",
-            "SceneWindowWidth() / 2"
-          ]
-        },
         {
           "type": {
             "value": "SetCameraCenterY"
