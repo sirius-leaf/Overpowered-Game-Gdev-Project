@@ -885,22 +885,41 @@
           "conditions": [
             {
               "type": {
-                "value": "BooleanVariable"
-              },
-              "parameters": [
-                "DepotDestroyed",
-                "True",
-                ""
-              ]
-            },
-            {
-              "type": {
                 "inverted": true,
                 "value": "LayerVisible"
               },
               "parameters": [
                 "",
                 "\"UI\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "DepotDestroyed",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "<=",
+                    "0"
+                  ]
+                }
               ]
             }
           ],
@@ -1130,6 +1149,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Camera",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1207,7 +1227,7 @@
                         },
                         {
                           "type": {
-                            "value": "KeyFromTextReleased"
+                            "value": "KeyFromTextPressed"
                           },
                           "parameters": [
                             "",
@@ -1305,7 +1325,7 @@
                   "parameters": [
                     "",
                     "=",
-                    "lerp(Player.X() / 2 + Player.CamShake[0], CameraCenterX(), exp(-LerpDecay* TimeDelta()))",
+                    "lerp(clamp(Player.X() + Player.CamShake[0], -896, 896), CameraCenterX(), exp(-LerpDecay* TimeDelta()))",
                     "",
                     ""
                   ]
@@ -1947,7 +1967,7 @@
                   },
                   "parameters": [
                     "Bullet",
-                    "CollisionAmount"
+                    "CollisionTimes"
                   ]
                 },
                 {
@@ -2265,6 +2285,17 @@
               "conditions": [
                 {
                   "type": {
+                    "value": "Distance"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "Player",
+                    "1000",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "inverted": true,
                     "value": "Distance"
                   },
@@ -2302,7 +2333,7 @@
                     "Enemy.X()",
                     "Enemy.Y()",
                     "Enemy.Angle()",
-                    "5000",
+                    "1000",
                     "CollisionPos[0]",
                     "CollisionPos[1]",
                     ""
@@ -2493,6 +2524,18 @@
                     "\"Adjustment\"",
                     "\"saturation\"",
                     "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "DepotCollectParticle",
+                    "DepotEnergy.X()",
+                    "DepotEnergy.Y()",
+                    ""
                   ]
                 },
                 {
@@ -2718,6 +2761,18 @@
                 },
                 {
                   "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "DepotCollectParticle",
+                    "DepotEnergy.X()",
+                    "DepotEnergy.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Delete"
                   },
                   "parameters": [
@@ -2756,33 +2811,78 @@
                     "",
                     "\"UI\""
                   ]
-                },
+                }
+              ],
+              "events": [
                 {
-                  "type": {
-                    "value": "Wait"
-                  },
-                  "parameters": [
-                    "1"
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "AvailableMission",
+                        "<=",
+                        "MissionOrder"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "AvailableMission",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "EcrireFichierExp"
+                      },
+                      "parameters": [
+                        "\"Proggress\"",
+                        "\"Mission\"",
+                        "AvailableMission"
+                      ]
+                    }
                   ]
                 },
                 {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "EndGameTitle",
-                    "Text",
-                    "=",
-                    "\"Mission Complete\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ShowLayer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"End Game UI\""
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "EndGameTitle",
+                        "Text",
+                        "=",
+                        "\"Mission Complete\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ShowLayer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"End Game UI\""
+                      ]
+                    }
                   ]
                 }
               ]

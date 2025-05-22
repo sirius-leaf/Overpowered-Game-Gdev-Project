@@ -12,14 +12,14 @@
     "antialisingEnabledOnMobile": false,
     "folderProject": true,
     "orientation": "landscape",
-    "packageName": "com.example.gamename",
+    "packageName": "com.example.overblastforce",
     "pixelsRounding": true,
     "projectUuid": "934b88b9-9abc-4890-9c0d-2284622a2e17",
     "scaleMode": "nearest",
     "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
     "version": "1.0.0",
-    "name": "Overpowered",
+    "name": "Overblast Force",
     "description": "",
     "author": "",
     "windowWidth": 1280,
@@ -77,8 +77,12 @@
       "placement": "bottom-left",
       "showWatermark": true
     },
-    "authorIds": [],
-    "authorUsernames": [],
+    "authorIds": [
+      "ldQqDYXzZ0YM2mMQMAUIUErLcHA3"
+    ],
+    "authorUsernames": [
+      "Sirius_Leaf_"
+    ],
     "categories": [],
     "playableDevices": [],
     "extensionProperties": [],
@@ -1232,6 +1236,11 @@
           "name": "LifeTime",
           "type": "number",
           "value": 1
+        },
+        {
+          "name": "CollisionTimes",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -3155,6 +3164,53 @@
         "characterSize": 40,
         "color": "255;255;255"
       }
+    },
+    {
+      "additive": true,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 1500,
+      "emitterForceMin": 500,
+      "flow": 10000,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 300,
+      "name": "DepotCollectParticle",
+      "particleAlpha1": 255,
+      "particleAlpha2": 64,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 255,
+      "particleBlue2": 255,
+      "particleColor1": "255;255;255",
+      "particleColor2": "255;255;255",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 255,
+      "particleGreen2": 255,
+      "particleLifeTimeMax": 1.5,
+      "particleLifeTimeMin": 0.5,
+      "particleRed1": 255,
+      "particleRed2": 255,
+      "particleSize1": 200,
+      "particleSize2": 1,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 308,
+      "rendererParam2": 308,
+      "rendererType": "Quad",
+      "tank": 10,
+      "textureParticleName": "DepotGlow.png",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 1,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -3259,6 +3315,9 @@
       {
         "folderName": "Depot",
         "children": [
+          {
+            "objectName": "DepotCollectParticle"
+          },
           {
             "objectName": "DepotEnergy"
           },
@@ -3419,12 +3478,6 @@
         },
         {
           "name": "PauseButton"
-        },
-        {
-          "name": "Resume"
-        },
-        {
-          "name": "ExitMission"
         }
       ]
     }
@@ -3434,12 +3487,21 @@
       "name": "MainMenuCamY",
       "type": "number",
       "value": 360
+    },
+    {
+      "name": "AvailableMission",
+      "type": "number",
+      "value": 1
     }
   ],
   "layouts": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/untitled-scene"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/mission-2"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,

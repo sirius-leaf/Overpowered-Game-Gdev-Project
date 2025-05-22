@@ -39,6 +39,9 @@
         },
         {
           "name": "MissionUndefined"
+        },
+        {
+          "name": "Mission2"
         }
       ]
     }
@@ -115,7 +118,7 @@
       "angle": 0,
       "customSize": true,
       "depth": 1,
-      "height": 70,
+      "height": 50,
       "layer": "",
       "name": "Mission1",
       "persistentUuid": "cee3f173-3d09-4caf-9216-a3b00e775ff7",
@@ -131,29 +134,13 @@
       "angle": 0,
       "customSize": true,
       "depth": 1,
-      "height": 59,
-      "layer": "",
-      "name": "MissionUndefined",
-      "persistentUuid": "9395e996-698f-430b-a192-5c0cdaf24747",
-      "width": 362,
-      "x": 459,
-      "y": -474,
-      "zOrder": 7,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 1,
-      "height": 59,
+      "height": 50,
       "layer": "",
       "name": "MissionUndefined",
       "persistentUuid": "bf38f4fd-ffee-42df-b1f7-3e27570e02e9",
       "width": 362,
       "x": 459,
-      "y": -409,
+      "y": -417,
       "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
@@ -171,6 +158,22 @@
       "x": 0,
       "y": -669,
       "zOrder": 8,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 50,
+      "layer": "",
+      "name": "Mission2",
+      "persistentUuid": "94e616ff-421c-4150-b7f3-2ebcdd1b5888",
+      "width": 222,
+      "x": 529,
+      "y": -473,
+      "zOrder": 9,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -586,6 +589,59 @@
         "characterSize": 60,
         "color": "255;255;255"
       }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "Mission2",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 4,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
+      "string": "Mission 2",
+      "font": "",
+      "textAlignment": "center",
+      "characterSize": 40,
+      "color": {
+        "b": 124,
+        "g": 124,
+        "r": 124
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Mission 2",
+        "font": "",
+        "textAlignment": "center",
+        "verticalTextAlignment": "center",
+        "characterSize": 40,
+        "color": "124;124;124"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -611,6 +667,9 @@
       },
       {
         "objectName": "Mission1"
+      },
+      {
+        "objectName": "Mission2"
       },
       {
         "objectName": "MissionUndefined"
@@ -641,6 +700,35 @@
             "MainMenuCamY",
             "",
             ""
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "GroupExists"
+              },
+              "parameters": [
+                "\"Proggress\"",
+                "\"Mission\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ReadNumberFromStorage"
+              },
+              "parameters": [
+                "\"Proggress\"",
+                "\"Mission\"",
+                "",
+                "AvailableMission"
+              ]
+            }
           ]
         }
       ]
@@ -718,6 +806,32 @@
                 "Scale",
                 "=",
                 "lerp(1, Button.Scale::Value(), exp(-LerpDecay * TimeDelta()))"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "AvailableMission",
+                ">=",
+                "2"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TextObject::ChangeColor"
+              },
+              "parameters": [
+                "Mission2",
+                "\"255;255;255\""
               ]
             }
           ]
@@ -841,7 +955,45 @@
                   },
                   "parameters": [
                     "CamPosY",
-                    "\"Untitled scene\"",
+                    "\"Mission 1\"",
+                    "360"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "Mission2",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "AvailableMission",
+                    ">=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "CamPosY",
+                    "\"Mission 2\"",
                     "360"
                   ]
                 }
@@ -855,6 +1007,53 @@
           "name": "LerpDecay",
           "type": "number",
           "value": 15
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "SecretCode::SecretCode::CodeEntered"
+          },
+          "parameters": [
+            "Title",
+            "SecretCode",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberVariable"
+          },
+          "parameters": [
+            "AvailableMission",
+            "=",
+            "1"
+          ]
+        },
+        {
+          "type": {
+            "value": "EcrireFichierExp"
+          },
+          "parameters": [
+            "\"Proggress\"",
+            "\"Mission\"",
+            "AvailableMission"
+          ]
+        },
+        {
+          "type": {
+            "value": "Scene"
+          },
+          "parameters": [
+            "",
+            "CurrentSceneName()",
+            ""
+          ]
         }
       ]
     }

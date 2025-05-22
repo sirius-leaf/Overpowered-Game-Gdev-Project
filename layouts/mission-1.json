@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.1,
     "snap": true,
-    "zoomFactor": 0.4789341884535318,
+    "zoomFactor": 0.24672586957406634,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -76,6 +76,11 @@
       "name": "IntroMaxY",
       "type": "number",
       "value": -4224
+    },
+    {
+      "name": "MissionOrder",
+      "type": "number",
+      "value": 1
     }
   ],
   "instances": [
@@ -185,7 +190,7 @@
       "name": "WorldBorder",
       "persistentUuid": "93c2320d-b1a9-40e6-a292-950b47cf77db",
       "width": 500,
-      "x": 1280,
+      "x": 1600,
       "y": 0,
       "zOrder": 14,
       "numberProperties": [],
@@ -207,7 +212,7 @@
       "name": "WorldBorder",
       "persistentUuid": "258d0095-6b27-496d-a207-3c23144aca3d",
       "width": 500,
-      "x": -1280,
+      "x": -1600,
       "y": 0,
       "zOrder": 14,
       "numberProperties": [],
@@ -723,6 +728,22 @@
       "x": -512,
       "y": -3840,
       "zOrder": -10,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 180,
+      "customSize": true,
+      "depth": 1,
+      "height": 500,
+      "layer": "",
+      "name": "WorldBorder",
+      "persistentUuid": "e249e870-598f-45aa-940e-a0720f667044",
+      "width": 500,
+      "x": 0,
+      "y": -5120,
+      "zOrder": 14,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []

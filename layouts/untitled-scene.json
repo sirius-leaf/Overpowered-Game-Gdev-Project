@@ -76,6 +76,11 @@
       "name": "IntroMaxY",
       "type": "number",
       "value": -1000
+    },
+    {
+      "name": "MissionOrder",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [
@@ -202,7 +207,7 @@
       "name": "WorldBorder",
       "persistentUuid": "93c2320d-b1a9-40e6-a292-950b47cf77db",
       "width": 500,
-      "x": 1280,
+      "x": 1600,
       "y": 0,
       "zOrder": 14,
       "numberProperties": [],
@@ -224,7 +229,7 @@
       "name": "WorldBorder",
       "persistentUuid": "258d0095-6b27-496d-a207-3c23144aca3d",
       "width": 500,
-      "x": -1280,
+      "x": -1600,
       "y": 0,
       "zOrder": 14,
       "numberProperties": [],
