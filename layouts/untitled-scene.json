@@ -11,8 +11,8 @@
   "uiSettings": {
     "grid": true,
     "gridType": "rectangular",
-    "gridWidth": 32,
-    "gridHeight": 32,
+    "gridWidth": 64,
+    "gridHeight": 64,
     "gridOffsetX": 0,
     "gridOffsetY": 0,
     "gridColor": 10401023,

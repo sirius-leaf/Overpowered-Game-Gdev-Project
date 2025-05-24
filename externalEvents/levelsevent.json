@@ -30,6 +30,19 @@
         },
         {
           "type": {
+            "value": "PlayMusicCanal"
+          },
+          "parameters": [
+            "",
+            "BGM.ogg",
+            "0",
+            "",
+            "100",
+            "1"
+          ]
+        },
+        {
+          "type": {
             "value": "CentreCamera"
           },
           "parameters": [
@@ -129,7 +142,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Player",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -167,7 +179,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Control",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -452,7 +463,7 @@
                             "Tween",
                             "\"CamZoom\"",
                             "Player.Tween::Value(\"CamZoom\")",
-                            "0.2",
+                            "0.3",
                             "\"linear\"",
                             "2",
                             "",
@@ -555,6 +566,19 @@
                             "",
                             ""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySoundCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "PlayerCharge.wav",
+                            "0",
+                            "100",
+                            "30",
+                            "1"
+                          ]
                         }
                       ]
                     }
@@ -635,7 +659,7 @@
                         "Player.Tween::Value(\"CamZoom\")",
                         "0",
                         "\"easeOutExpo\"",
-                        "0.5",
+                        "1",
                         "",
                         ""
                       ]
@@ -717,6 +741,15 @@
                       "parameters": [
                         "PlayerChargeParticle",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StopSoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "0"
                       ]
                     }
                   ]
@@ -926,6 +959,15 @@
           "actions": [
             {
               "type": {
+                "value": "StopSoundCanal"
+              },
+              "parameters": [
+                "",
+                "0"
+              ]
+            },
+            {
+              "type": {
                 "value": "Delete"
               },
               "parameters": [
@@ -941,6 +983,37 @@
                 "PlayerChargeParticle",
                 ""
               ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "FadeMusicVolume"
+                  },
+                  "parameters": [
+                    "",
+                    "0",
+                    "0",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
             }
           ]
         },
@@ -1135,6 +1208,18 @@
                     "PlayerShootParticle",
                     "=",
                     "Player.Angle()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "PlayerShoot2.wav",
+                    "",
+                    "30",
+                    "1"
                   ]
                 }
               ]
@@ -1348,7 +1433,7 @@
                   },
                   "parameters": [
                     "",
-                    "1 + Player.Tween::Value(\"CamZoom\")",
+                    "1 - Player.Tween::Value(\"CamZoom\")",
                     "",
                     ""
                   ]
@@ -1477,7 +1562,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Turret",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1856,6 +1940,35 @@
               "value": 5000
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "FireBullet::FireBullet::HasJustFired"
+              },
+              "parameters": [
+                "Turret",
+                "FireBullet",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "EnemyShoot",
+                "",
+                "30",
+                "RandomFloatInRange(0.7, 1.3)"
+              ]
+            }
+          ]
         }
       ],
       "parameters": []
@@ -1865,7 +1978,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Bullet",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1963,6 +2075,18 @@
               "actions": [
                 {
                   "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "Explosion.wav",
+                    "",
+                    "30",
+                    "RandomFloatInRange(0.9, 1.1)"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Delete"
                   },
                   "parameters": [
@@ -1989,6 +2113,49 @@
                   "parameters": [
                     "EnemyObject",
                     ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    "ReinforcedWall",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "ExplosionParticle",
+                    "Bullet.X()",
+                    "Bullet.Y()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "Explosion.wav",
+                    "",
+                    "30",
+                    "RandomFloatInRange(0.9, 1.1)"
                   ]
                 }
               ]
@@ -2125,6 +2292,18 @@
             },
             {
               "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Explosion.wav",
+                "",
+                "30",
+                "RandomFloatInRange(0.9, 1.1)"
+              ]
+            },
+            {
+              "type": {
                 "value": "Create"
               },
               "parameters": [
@@ -2171,7 +2350,7 @@
                     "Player",
                     "Health",
                     "-",
-                    "round(ExplosionForce * 5)"
+                    "round(ExplosionForce * 10)"
                   ]
                 },
                 {
@@ -2224,6 +2403,52 @@
               "name": "ExplosionForce",
               "type": "number",
               "value": 0
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::Index"
+              },
+              "parameters": [
+                "MineBomb",
+                "Animation",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Sprite"
+              },
+              "parameters": [
+                "MineBomb",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "MineBeep.wav",
+                "",
+                "20",
+                "1"
+              ]
             }
           ]
         }
@@ -2411,6 +2636,35 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "FireBullet::FireBullet::HasJustFired"
+              },
+              "parameters": [
+                "Enemy",
+                "FireBullet",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "EnemyShoot2",
+                "",
+                "30",
+                "RandomFloatInRange(0.7, 1.3)"
+              ]
+            }
+          ]
         }
       ],
       "parameters": []
@@ -2420,6 +2674,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Depot",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -2540,6 +2795,18 @@
                 },
                 {
                   "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "DepotExplosion.wav",
+                    "",
+                    "30",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Delete"
                   },
                   "parameters": [
@@ -2647,11 +2914,35 @@
                 },
                 {
                   "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "DepotCollect.wav",
+                    "1",
+                    "",
+                    "30",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "ResetObjectTimer"
                   },
                   "parameters": [
                     "DepotEnergy",
                     "\"Collect\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "DepotEnergy",
+                    "BeingCollected",
+                    "True",
+                    ""
                   ]
                 }
               ]
@@ -2697,6 +2988,46 @@
                   "parameters": [
                     "DepotEnergy",
                     "\"Collect\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "DepotEnergy",
+                        "BeingCollected",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "StopSoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "DepotEnergy",
+                        "BeingCollected",
+                        "False",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ]
@@ -2746,8 +3077,8 @@
                   "parameters": [
                     "Player",
                     "Health",
-                    "+",
-                    "ceil((25 - Player.Health) * 0.7)"
+                    "=",
+                    "min(Player.Health + ceil((30 - Player.Health) * 0.7) + 3, 30)"
                   ]
                 },
                 {

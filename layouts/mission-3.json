@@ -1,0 +1,2241 @@
+{
+  "b": 56,
+  "disableInputWhenNotFocused": true,
+  "mangledName": "Mission_323",
+  "name": "Mission 3",
+  "r": 56,
+  "standardSortMethod": true,
+  "stopSoundsOnStartup": true,
+  "title": "",
+  "v": 56,
+  "uiSettings": {
+    "grid": true,
+    "gridType": "rectangular",
+    "gridWidth": 64,
+    "gridHeight": 64,
+    "gridOffsetX": 0,
+    "gridOffsetY": 0,
+    "gridColor": 10401023,
+    "gridAlpha": 0.1,
+    "snap": true,
+    "zoomFactor": 0.43357743047024283,
+    "windowMask": false
+  },
+  "objectsGroups": [],
+  "variables": [
+    {
+      "folded": true,
+      "name": "CollisionPos",
+      "type": "array",
+      "children": [
+        {
+          "type": "number",
+          "value": 0
+        },
+        {
+          "type": "number",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "DepotDestroyed",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "DepotDestructionPos",
+      "type": "array",
+      "children": [
+        {
+          "type": "number",
+          "value": 0
+        },
+        {
+          "type": "number",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "DepotCollected",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "Pause",
+      "type": "boolean",
+      "value": true
+    },
+    {
+      "name": "IsIntro",
+      "type": "boolean",
+      "value": true
+    },
+    {
+      "name": "IntroMaxY",
+      "type": "number",
+      "value": -5632
+    },
+    {
+      "name": "MissionOrder",
+      "type": "number",
+      "value": 3
+    }
+  ],
+  "instances": [
+    {
+      "angle": -90,
+      "customSize": true,
+      "depth": 0,
+      "height": 152,
+      "layer": "",
+      "name": "Player",
+      "persistentUuid": "820cd064-758d-46df-bbe4-fa8c6b5e48e2",
+      "width": 102,
+      "x": 0,
+      "y": 0,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretLaserPainter",
+      "persistentUuid": "5a879bd8-d3e2-4fbc-9e13-8ce9841791ea",
+      "width": 0,
+      "x": 0,
+      "y": 0,
+      "zOrder": 5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": -90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "PlayerWingLeft",
+      "persistentUuid": "67e7af76-0b8a-4806-9c6b-65c445e3d623",
+      "width": 0,
+      "x": -66,
+      "y": 67,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": -90,
+      "customSize": false,
+      "flippedY": true,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "PlayerWingRight",
+      "persistentUuid": "46459211-25a1-42af-8630-547204282e7b",
+      "width": 0,
+      "x": 66,
+      "y": 67,
+      "zOrder": -1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 208,
+      "layer": "",
+      "name": "PlayerCharge",
+      "persistentUuid": "b2e43e1c-951f-4d42-a8b3-c53b1399fafe",
+      "width": 208,
+      "x": 0,
+      "y": 0,
+      "zOrder": -2,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 500,
+      "layer": "",
+      "name": "WorldBorder",
+      "persistentUuid": "602d73bf-2b01-4fb0-a3e4-f7c527748cbd",
+      "width": 500,
+      "x": 0,
+      "y": 365,
+      "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": -90,
+      "customSize": true,
+      "depth": 1,
+      "height": 500,
+      "layer": "",
+      "name": "WorldBorder",
+      "persistentUuid": "93c2320d-b1a9-40e6-a292-950b47cf77db",
+      "width": 500,
+      "x": 1600,
+      "y": 0,
+      "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "IsHorizontalBorder",
+          "type": "boolean",
+          "value": false
+        }
+      ]
+    },
+    {
+      "angle": 90,
+      "customSize": true,
+      "depth": 1,
+      "height": 500,
+      "layer": "",
+      "name": "WorldBorder",
+      "persistentUuid": "258d0095-6b27-496d-a207-3c23144aca3d",
+      "width": 500,
+      "x": -1600,
+      "y": 0,
+      "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "IsHorizontalBorder",
+          "type": "boolean",
+          "value": false
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 3856,
+      "keepRatio": true,
+      "layer": "GroundTile",
+      "name": "GroundTile",
+      "persistentUuid": "ddca67fe-3aa7-453e-abc2-d0534a9733af",
+      "width": 3999,
+      "x": -1984,
+      "y": -1984,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "DepotEnergy",
+      "persistentUuid": "59791cc7-bda1-4fe5-9b20-ec455b8b1c8d",
+      "width": 0,
+      "x": 0,
+      "y": -1152,
+      "zOrder": -3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Depot",
+      "persistentUuid": "42a5cea2-88f5-49ba-b729-8a5c2490f7b1",
+      "width": 0,
+      "x": 0,
+      "y": -1152,
+      "zOrder": -4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "0eac772c-2e46-44be-852d-26e71bb2a456",
+      "width": 0,
+      "x": 384,
+      "y": -1152,
+      "zOrder": -5,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "faf70d4d-89b9-405e-954f-e2c44e9cb7a0",
+      "width": 0,
+      "x": 384,
+      "y": -1152,
+      "zOrder": -6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "ae545be8-1812-454d-a3a8-67e69130b993",
+      "width": 0,
+      "x": -384,
+      "y": -1152,
+      "zOrder": -5,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "bef2f07b-7587-4f75-b824-0849ca08c48c",
+      "width": 0,
+      "x": -384,
+      "y": -1152,
+      "zOrder": -6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "ba96a93d-0689-483b-99bc-95e2ce4df27d",
+      "width": 0,
+      "x": 320,
+      "y": -960,
+      "zOrder": 21,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "6111c79e-2e9f-4f4f-b379-5eb7500a3ea8",
+      "width": 0,
+      "x": 192,
+      "y": -960,
+      "zOrder": 21,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "6ed373c8-8526-4dda-9eda-f57244b247fb",
+      "width": 0,
+      "x": -448,
+      "y": -960,
+      "zOrder": 21,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "c1ac2b04-afc8-4c02-bc6e-143f156003cf",
+      "width": 0,
+      "x": -320,
+      "y": -960,
+      "zOrder": 21,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "379dde55-0ec6-4516-a49d-80f56bab679e",
+      "width": 0,
+      "x": -192,
+      "y": -960,
+      "zOrder": 21,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "bcfabdc8-27d2-40eb-8b61-edf5be820e78",
+      "width": 0,
+      "x": 128,
+      "y": -960,
+      "zOrder": 21,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "c227313d-e5e5-4b80-ab53-5e02f6927ea6",
+      "width": 0,
+      "x": 448,
+      "y": -960,
+      "zOrder": 21,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "a44612f4-c6a8-458b-a579-52d93affeae4",
+      "width": 0,
+      "x": -512,
+      "y": -960,
+      "zOrder": 21,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Enemy",
+      "persistentUuid": "6e1e76bc-b6b7-41c1-926c-c36159fe042c",
+      "width": 0,
+      "x": -160,
+      "y": -1440,
+      "zOrder": 27,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Enemy",
+      "persistentUuid": "a65a076e-962e-4734-b9ba-4e26bebb807c",
+      "width": 0,
+      "x": 160,
+      "y": -1440,
+      "zOrder": 28,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "DepotEnergy",
+      "persistentUuid": "4ee65276-673a-465a-a236-66bda76d218e",
+      "width": 0,
+      "x": 0,
+      "y": -2560,
+      "zOrder": -3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Depot",
+      "persistentUuid": "d7764dc1-86ad-4f09-84eb-e35ceb303200",
+      "width": 0,
+      "x": 0,
+      "y": -2560,
+      "zOrder": -4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "2623eb41-ad49-47fa-865e-fd4d5ac0aa5d",
+      "width": 0,
+      "x": 0,
+      "y": -2304,
+      "zOrder": -5,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "2b995944-49fc-47f1-b2d5-b384ba1c75bd",
+      "width": 0,
+      "x": 0,
+      "y": -2304,
+      "zOrder": -6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "cc840f1a-2945-4938-b795-81d0d8c0db47",
+      "width": 0,
+      "x": 192,
+      "y": -2368,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "a9d34288-10b2-410d-89f2-f565fb77c4e0",
+      "width": 0,
+      "x": -320,
+      "y": -2368,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "3dee2289-3e47-43c9-ad8c-9eb26a2aa649",
+      "width": 0,
+      "x": -320,
+      "y": -2880,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "ad4752d8-6a06-4d8f-b99e-04dc3ce4a8b3",
+      "width": 0,
+      "x": 192,
+      "y": -2880,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "MineBomb",
+      "persistentUuid": "ed0e36c0-2cd8-40f8-82cb-510e6e32d85b",
+      "width": 0,
+      "x": -608,
+      "y": -2272,
+      "zOrder": 24,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "MineBomb",
+      "persistentUuid": "8166fd27-f84b-42da-bc53-11d3fc13c851",
+      "width": 0,
+      "x": 608,
+      "y": -2272,
+      "zOrder": 24,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "fd7711d1-906d-47bf-9581-54d79f7f7384",
+      "width": 0,
+      "x": 0,
+      "y": -3712,
+      "zOrder": -5,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "01061452-5e9f-4a9b-a4a4-e76c8ba5594c",
+      "width": 0,
+      "x": 0,
+      "y": -3712,
+      "zOrder": -6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "502a52b8-4f9c-4635-a01f-5cc1922357cf",
+      "width": 0,
+      "x": 0,
+      "y": -3968,
+      "zOrder": -5,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "225ed68f-6ed3-4c6f-8340-e2199f631ea8",
+      "width": 0,
+      "x": 0,
+      "y": -3968,
+      "zOrder": -6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "4095e3e9-ca88-42fb-90ef-91e6540a55a2",
+      "width": 0,
+      "x": 192,
+      "y": -3904,
+      "zOrder": 21,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "224b6b74-e669-48a5-a03b-4e7a48a27b7c",
+      "width": 0,
+      "x": -320,
+      "y": -3904,
+      "zOrder": 21,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "af806ab7-22ca-4eb9-89aa-e73defaec936",
+      "width": 0,
+      "x": -256,
+      "y": -3776,
+      "zOrder": 21,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "648751fc-d9c0-4c04-9131-d9ee1ea1730b",
+      "width": 0,
+      "x": -256,
+      "y": -3968,
+      "zOrder": 21,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "f2559f51-ce37-41c0-8795-286b4ef5dd1a",
+      "width": 0,
+      "x": 192,
+      "y": -3968,
+      "zOrder": 21,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Wall",
+      "persistentUuid": "32e951cc-1094-46ae-8260-97450cebccb8",
+      "width": 0,
+      "x": 192,
+      "y": -3776,
+      "zOrder": 21,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "DepotEnergy",
+      "persistentUuid": "c0ee46db-b090-4640-96e4-def9a41b27e0",
+      "width": 0,
+      "x": -768,
+      "y": -3968,
+      "zOrder": -3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Depot",
+      "persistentUuid": "f0ae3301-9fe4-4366-ba9a-a0ead68e6657",
+      "width": 0,
+      "x": -768,
+      "y": -3968,
+      "zOrder": -4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "DepotEnergy",
+      "persistentUuid": "dca15642-f149-4390-9fb0-f2caea036c58",
+      "width": 0,
+      "x": 768,
+      "y": -3968,
+      "zOrder": -3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Depot",
+      "persistentUuid": "cfb0f2bd-625e-46c5-9140-9d12fb96ffd9",
+      "width": 0,
+      "x": 768,
+      "y": -3968,
+      "zOrder": -4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "ec7ee34d-193e-4271-b4df-f12acd179fce",
+      "width": 0,
+      "x": -64,
+      "y": -3520,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "d868dcac-e98b-4c1b-b2ca-6904b8f811e9",
+      "width": 0,
+      "x": 64,
+      "y": -3520,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "d8efbfbe-f73e-410f-9e53-93190d8709cb",
+      "width": 0,
+      "x": -192,
+      "y": -3520,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "f1c7d515-fde4-404c-87ab-898501e450c5",
+      "width": 0,
+      "x": 192,
+      "y": -3520,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "3b0d0896-6730-4a90-a558-6052c9315486",
+      "width": 0,
+      "x": -256,
+      "y": -3520,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "aa9be93a-6410-4d41-86b2-3c2424a726e0",
+      "width": 0,
+      "x": 704,
+      "y": -3776,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "92bb6357-e6fe-49bf-8a56-c3538ab5c04c",
+      "width": 0,
+      "x": 640,
+      "y": -3776,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "0951e1ec-2bf7-4aec-a557-e2ce04ff8991",
+      "width": 0,
+      "x": 832,
+      "y": -3776,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "43dce421-3049-40fd-9162-cdc6b64c72f9",
+      "width": 0,
+      "x": -832,
+      "y": -3776,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "ada2f02b-6ba3-4b23-9d3a-60287b778048",
+      "width": 0,
+      "x": -896,
+      "y": -3776,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "f11a91d5-2b32-4dc2-b491-713661c07349",
+      "width": 0,
+      "x": -704,
+      "y": -3776,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "f85e61b7-2c3e-4c0d-9444-9eee17b9c824",
+      "width": 0,
+      "x": -1088,
+      "y": -4032,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "fed9b65b-5ec1-490a-8198-42bce4dbc21a",
+      "width": 0,
+      "x": -1024,
+      "y": -3904,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "c7520052-01d1-4aaa-a261-73ddbaef67e3",
+      "width": 0,
+      "x": 960,
+      "y": -3904,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "8cf6cfee-08ab-4964-9383-877a2c69634f",
+      "width": 0,
+      "x": 960,
+      "y": -4032,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "MineBomb",
+      "persistentUuid": "e67e93c3-06c4-41c2-a3ad-7595f294c41b",
+      "width": 0,
+      "x": -480,
+      "y": -3552,
+      "zOrder": 24,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "MineBomb",
+      "persistentUuid": "1bb232f9-d64f-441b-bc3b-b6f159abadfe",
+      "width": 0,
+      "x": 480,
+      "y": -3552,
+      "zOrder": 24,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Enemy",
+      "persistentUuid": "098f4694-5a86-4fc1-9254-f5d10e4b9624",
+      "width": 0,
+      "x": 480,
+      "y": -4320,
+      "zOrder": 26,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Enemy",
+      "persistentUuid": "1ba491d9-b61e-48c3-8209-1d3f627eab91",
+      "width": 0,
+      "x": -480,
+      "y": -4320,
+      "zOrder": 25,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "d3868043-865a-4034-b45f-502e1a61ef6e",
+      "width": 0,
+      "x": 0,
+      "y": -5120,
+      "zOrder": -5,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "1fc0d4ef-b773-4664-95f1-82a3329f4526",
+      "width": 0,
+      "x": 0,
+      "y": -5120,
+      "zOrder": -6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "77d01efa-0a83-4e5c-a27a-4f805793ab35",
+      "width": 0,
+      "x": 0,
+      "y": -5632,
+      "zOrder": -5,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "10a50b27-4f15-4cbf-9500-0c2a0aadf206",
+      "width": 0,
+      "x": 0,
+      "y": -5632,
+      "zOrder": -6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "8c012e36-2fa7-477b-993a-8c4d971ae124",
+      "width": 0,
+      "x": 640,
+      "y": -5376,
+      "zOrder": -5,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "e7884e60-cdd5-4db9-b4c4-abfafd2d196d",
+      "width": 0,
+      "x": 640,
+      "y": -5376,
+      "zOrder": -6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "fb69f032-cc1e-46ca-9070-e740025cb1f8",
+      "width": 0,
+      "x": -640,
+      "y": -5376,
+      "zOrder": -5,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "bf2c2bdb-2126-4506-9c9e-d61e9f644a8b",
+      "width": 0,
+      "x": -640,
+      "y": -5376,
+      "zOrder": -6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "DepotEnergy",
+      "persistentUuid": "e7513bd3-c66a-4e25-a9a4-6ed4ed685771",
+      "width": 0,
+      "x": 0,
+      "y": -5376,
+      "zOrder": -3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Depot",
+      "persistentUuid": "287d5e46-164d-40b2-b49e-6b4613bf57d3",
+      "width": 0,
+      "x": 0,
+      "y": -5376,
+      "zOrder": -4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "2d5a6856-7cdf-47e6-946f-6cdbc3895f97",
+      "width": 0,
+      "x": -64,
+      "y": -4928,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "aae304e5-096f-44b7-a3cf-bbd5f1aa406b",
+      "width": 0,
+      "x": 64,
+      "y": -4928,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "eb0756d2-0acc-4867-9fce-3026cc0d20a0",
+      "width": 0,
+      "x": -192,
+      "y": -4928,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "ee416461-ec77-418c-90e6-c93dca933414",
+      "width": 0,
+      "x": -256,
+      "y": -4928,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "7ae378a3-03a2-4983-be48-b2f5816e409c",
+      "width": 0,
+      "x": 192,
+      "y": -4928,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "01e6d72f-04e9-4617-95f8-02d7535eb073",
+      "width": 0,
+      "x": 576,
+      "y": -5184,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "03ce22d1-2c33-4f65-9fde-a28c19545e2b",
+      "width": 0,
+      "x": 576,
+      "y": -5056,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "754edef9-5a7c-4406-a96c-45a0aceb7306",
+      "width": 0,
+      "x": 704,
+      "y": -5184,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "54bbe910-12f0-4f8f-ab1a-48eab1b24612",
+      "width": 0,
+      "x": -704,
+      "y": -5184,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "fac91636-7488-441d-bfb2-cf954bba5869",
+      "width": 0,
+      "x": -640,
+      "y": -5056,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "b8ae162c-df2a-4343-ba4e-ef45da8b78db",
+      "width": 0,
+      "x": -768,
+      "y": -5184,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "MineBomb",
+      "persistentUuid": "972d7437-0b5d-4aff-bcc8-ec1221cbb0e1",
+      "width": 0,
+      "x": -416,
+      "y": -5024,
+      "zOrder": 24,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "MineBomb",
+      "persistentUuid": "42768507-36c1-498a-9fb5-2139ebf41cb8",
+      "width": 0,
+      "x": 416,
+      "y": -5025,
+      "zOrder": 24,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "e35400d7-5f01-47a0-bb30-f2faab0f48b6",
+      "width": 0,
+      "x": -192,
+      "y": -2880,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "3dac509e-fa1a-4d22-9f3a-df5f17ea96d3",
+      "width": 0,
+      "x": 128,
+      "y": -2880,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "e690737c-40db-4455-aaa2-7f881af5390d",
+      "width": 0,
+      "x": 128,
+      "y": -2304,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "ReinforcedWall",
+      "persistentUuid": "f1e36d82-b180-41d3-8eca-fd95e24dbcd9",
+      "width": 0,
+      "x": -192,
+      "y": -2304,
+      "zOrder": 23,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 90,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Turret",
+      "persistentUuid": "0fbbdca8-02fd-4fed-bd56-3b3432be460e",
+      "width": 0,
+      "x": 0,
+      "y": -2816,
+      "zOrder": -5,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "TurretBase",
+      "persistentUuid": "6e3fc6ca-6b71-4ebf-95dc-8df77a30d0d1",
+      "width": 0,
+      "x": 0,
+      "y": -2816,
+      "zOrder": -6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    }
+  ],
+  "objects": [],
+  "objectsFolderStructure": {
+    "folderName": "__ROOT"
+  },
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "LevelsEvent"
+    }
+  ],
+  "layers": [
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": true,
+      "name": "GroundTile",
+      "renderingType": "2d",
+      "visibility": true,
+      "cameras": [],
+      "effects": [
+        {
+          "effectType": "Scene3D::HemisphereLight",
+          "name": "3D Light",
+          "doubleParameters": {
+            "elevation": 45,
+            "intensity": 1,
+            "rotation": 0
+          },
+          "stringParameters": {
+            "groundColor": "64;64;64",
+            "skyColor": "255;255;255",
+            "top": "Y-"
+          },
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "Adjustment",
+          "name": "Adjustment",
+          "doubleParameters": {
+            "alpha": 1,
+            "blue": 1,
+            "brightness": 1,
+            "contrast": 1,
+            "gamma": 1,
+            "green": 1,
+            "red": 1,
+            "saturation": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "ZoomBlur",
+          "name": "ZoomBlur",
+          "doubleParameters": {
+            "centerX": 0.5,
+            "centerY": 0.5,
+            "innerRadius": 0,
+            "padding": 0,
+            "strength": 0
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ]
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "",
+      "renderingType": "2d",
+      "visibility": true,
+      "cameras": [
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        }
+      ],
+      "effects": [
+        {
+          "effectType": "Adjustment",
+          "name": "Adjustment",
+          "doubleParameters": {
+            "alpha": 1,
+            "blue": 1,
+            "brightness": 1,
+            "contrast": 1,
+            "gamma": 1,
+            "green": 1,
+            "red": 1,
+            "saturation": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "ZoomBlur",
+          "name": "ZoomBlur",
+          "doubleParameters": {
+            "centerX": 0.5,
+            "centerY": 0.5,
+            "innerRadius": 0,
+            "padding": 0,
+            "strength": 0
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ]
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "UI",
+      "renderingType": "2d",
+      "visibility": false,
+      "cameras": [],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "End Game UI",
+      "renderingType": "2d",
+      "visibility": false,
+      "cameras": [],
+      "effects": [
+        {
+          "effectType": "Scene3D::HemisphereLight",
+          "name": "3D Light",
+          "doubleParameters": {
+            "elevation": 45,
+            "intensity": 1,
+            "rotation": 0
+          },
+          "stringParameters": {
+            "groundColor": "64;64;64",
+            "skyColor": "255;255;255",
+            "top": "Y-"
+          },
+          "booleanParameters": {}
+        }
+      ]
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "Pause UI",
+      "renderingType": "2d",
+      "visibility": false,
+      "cameras": [],
+      "effects": [
+        {
+          "effectType": "Scene3D::HemisphereLight",
+          "name": "3D Light",
+          "doubleParameters": {
+            "elevation": 45,
+            "intensity": 1,
+            "rotation": 0
+          },
+          "stringParameters": {
+            "groundColor": "64;64;64",
+            "skyColor": "255;255;255",
+            "top": "Y-"
+          },
+          "booleanParameters": {}
+        }
+      ]
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "Intro UI",
+      "renderingType": "2d",
+      "visibility": true,
+      "cameras": [],
+      "effects": [
+        {
+          "effectType": "Scene3D::HemisphereLight",
+          "name": "3D Light",
+          "doubleParameters": {
+            "elevation": 45,
+            "intensity": 1,
+            "rotation": 0
+          },
+          "stringParameters": {
+            "groundColor": "64;64;64",
+            "skyColor": "255;255;255",
+            "top": "Y-"
+          },
+          "booleanParameters": {}
+        }
+      ]
+    }
+  ],
+  "behaviorsSharedData": [
+    {
+      "name": "Anchor",
+      "type": "AnchorBehavior::AnchorBehavior"
+    },
+    {
+      "name": "Animation",
+      "type": "AnimatableCapability::AnimatableBehavior"
+    },
+    {
+      "name": "Effect",
+      "type": "EffectCapability::EffectBehavior"
+    },
+    {
+      "name": "FireBullet",
+      "type": "FireBullet::FireBullet"
+    },
+    {
+      "name": "Flippable",
+      "type": "FlippableCapability::FlippableBehavior"
+    },
+    {
+      "name": "Opacity",
+      "type": "OpacityCapability::OpacityBehavior"
+    },
+    {
+      "name": "Resizable",
+      "type": "ResizableCapability::ResizableBehavior"
+    },
+    {
+      "name": "Scale",
+      "type": "ScalableCapability::ScalableBehavior"
+    },
+    {
+      "name": "Text",
+      "type": "TextContainerCapability::TextContainerBehavior"
+    },
+    {
+      "name": "TopDownMovement",
+      "type": "TopDownMovementBehavior::TopDownMovementBehavior"
+    },
+    {
+      "name": "Tween",
+      "type": "Tween::TweenBehavior"
+    }
+  ]
+}

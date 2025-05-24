@@ -12,13 +12,13 @@
     "antialisingEnabledOnMobile": false,
     "folderProject": true,
     "orientation": "landscape",
-    "packageName": "com.example.overblastforce",
+    "packageName": "com.leafs.overblastforce",
     "pixelsRounding": true,
     "projectUuid": "934b88b9-9abc-4890-9c0d-2284622a2e17",
     "scaleMode": "nearest",
     "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "name": "Overblast Force",
     "description": "",
     "author": "",
@@ -454,6 +454,106 @@
         "name": "Blackscreen50Opacity.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "PlayerShoot.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "PlayerShoot.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "PlayerShoot2.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "PlayerShoot2.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "PlayerCharge.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "PlayerCharge.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Explosion.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Explosion.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "DepotCollect.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "DepotCollect.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "DepotExplosion.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "DepotExplosion.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "MineBeep.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "MineBeep.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "BGM.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "BGM.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/EnemyShoot.wav",
+        "kind": "audio",
+        "metadata": "{\"extension\":\".wav\",\"jfxr\":{\"data\":\"{\\\"_version\\\":1,\\\"_name\\\":\\\"Laser/shoot 12\\\",\\\"_locked\\\":[],\\\"sampleRate\\\":44100,\\\"attack\\\":0,\\\"sustain\\\":0.07,\\\"sustainPunch\\\":90,\\\"decay\\\":0.07,\\\"tremoloDepth\\\":0,\\\"tremoloFrequency\\\":10,\\\"frequency\\\":1500,\\\"frequencySweep\\\":-700,\\\"frequencyDeltaSweep\\\":-600,\\\"repeatFrequency\\\":0,\\\"frequencyJump1Onset\\\":33,\\\"frequencyJump1Amount\\\":0,\\\"frequencyJump2Onset\\\":66,\\\"frequencyJump2Amount\\\":0,\\\"harmonics\\\":0,\\\"harmonicsFalloff\\\":0.5,\\\"waveform\\\":\\\"breaker\\\",\\\"interpolateNoise\\\":true,\\\"vibratoDepth\\\":610,\\\"vibratoFrequency\\\":74,\\\"squareDuty\\\":10,\\\"squareDutySweep\\\":-5,\\\"flangerOffset\\\":2,\\\"flangerOffsetSweep\\\":-7,\\\"bitCrush\\\":16,\\\"bitCrushSweep\\\":0,\\\"lowPassCutoff\\\":22050,\\\"lowPassCutoffSweep\\\":0,\\\"highPassCutoff\\\":0,\\\"highPassCutoffSweep\\\":0,\\\"compression\\\":1,\\\"normalization\\\":true,\\\"amplification\\\":100}\",\"name\":\"EnemyShoot\"}}",
+        "name": "EnemyShoot",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/EnemyShoot2.wav",
+        "kind": "audio",
+        "metadata": "{\"extension\":\".wav\",\"jfxr\":{\"data\":\"{\\\"_version\\\":1,\\\"_name\\\":\\\"Laser/shoot 11\\\",\\\"_locked\\\":[],\\\"sampleRate\\\":44100,\\\"attack\\\":0,\\\"sustain\\\":0.03,\\\"sustainPunch\\\":60,\\\"decay\\\":0.04,\\\"tremoloDepth\\\":0,\\\"tremoloFrequency\\\":10,\\\"frequency\\\":1300,\\\"frequencySweep\\\":-1500,\\\"frequencyDeltaSweep\\\":-700,\\\"repeatFrequency\\\":0,\\\"frequencyJump1Onset\\\":33,\\\"frequencyJump1Amount\\\":0,\\\"frequencyJump2Onset\\\":66,\\\"frequencyJump2Amount\\\":0,\\\"harmonics\\\":0,\\\"harmonicsFalloff\\\":0.5,\\\"waveform\\\":\\\"triangle\\\",\\\"interpolateNoise\\\":true,\\\"vibratoDepth\\\":0,\\\"vibratoFrequency\\\":10,\\\"squareDuty\\\":65,\\\"squareDutySweep\\\":85,\\\"flangerOffset\\\":7,\\\"flangerOffsetSweep\\\":2,\\\"bitCrush\\\":16,\\\"bitCrushSweep\\\":0,\\\"lowPassCutoff\\\":22050,\\\"lowPassCutoffSweep\\\":0,\\\"highPassCutoff\\\":0,\\\"highPassCutoffSweep\\\":0,\\\"compression\\\":1,\\\"normalization\\\":true,\\\"amplification\\\":100}\",\"name\":\"EnemyShoot2\"}}",
+        "name": "EnemyShoot2",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -811,7 +911,13 @@
       "preScale": 2,
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "BeingCollected",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [
         {
@@ -881,12 +987,12 @@
         {
           "name": "MoveSpeed",
           "type": "number",
-          "value": 250
+          "value": 500
         },
         {
           "name": "RotateSpeed",
           "type": "number",
-          "value": 150
+          "value": 240
         },
         {
           "name": "Recoil",
@@ -902,7 +1008,7 @@
         {
           "name": "Health",
           "type": "number",
-          "value": 25
+          "value": 30
         },
         {
           "name": "WingRotationOffset",
@@ -958,17 +1064,16 @@
           "RandomizedAngle": 0
         },
         {
-          "isFolded": true,
+          "acceleration": 4000,
+          "deceleration": 4000,
+          "maxSpeed": 400,
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior",
-          "acceleration": 2500,
           "allowDiagonals": true,
           "angleOffset": 0,
           "angularMaxSpeed": 180,
           "customIsometryAngle": 30,
-          "deceleration": 2500,
           "ignoreDefaultControls": false,
-          "maxSpeed": 250,
           "movementAngleOffset": 0,
           "rotateObject": false,
           "viewpoint": "TopDown"
@@ -1274,7 +1379,7 @@
                     [
                       {
                         "x": 31,
-                        "y": 27
+                        "y": 24
                       },
                       {
                         "x": 67,
@@ -1282,7 +1387,7 @@
                       },
                       {
                         "x": 31,
-                        "y": 51
+                        "y": 54
                       }
                     ]
                   ]
@@ -1756,7 +1861,7 @@
       ]
     },
     {
-      "adaptCollisionMaskAutomatically": true,
+      "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
       "name": "MineBomb",
       "preScale": 2,
@@ -1780,8 +1885,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 16,
-                    "y": 16
+                    "x": 30,
+                    "y": 29
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1792,20 +1897,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 14,
-                        "y": 13
+                        "x": 11,
+                        "y": 10
                       },
                       {
-                        "x": 46,
-                        "y": 13
+                        "x": 49,
+                        "y": 10
                       },
                       {
-                        "x": 46,
-                        "y": 45
+                        "x": 49,
+                        "y": 48
                       },
                       {
-                        "x": 14,
-                        "y": 45
+                        "x": 11,
+                        "y": 48
                       }
                     ]
                   ]
@@ -1821,7 +1926,7 @@
             {
               "looping": true,
               "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.1,
+              "timeBetweenFrames": 0.15,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
@@ -1829,8 +1934,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 16,
-                    "y": 16
+                    "x": 30,
+                    "y": 29
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1841,20 +1946,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 14,
-                        "y": 13
+                        "x": 11,
+                        "y": 10
                       },
                       {
-                        "x": 46,
-                        "y": 13
+                        "x": 49,
+                        "y": 10
                       },
                       {
-                        "x": 46,
-                        "y": 45
+                        "x": 49,
+                        "y": 48
                       },
                       {
-                        "x": 14,
-                        "y": 45
+                        "x": 11,
+                        "y": 48
                       }
                     ]
                   ]
@@ -1865,8 +1970,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 16,
-                    "y": 16
+                    "x": 30,
+                    "y": 29
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1877,20 +1982,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 14,
-                        "y": 13
+                        "x": 11,
+                        "y": 10
                       },
                       {
-                        "x": 46,
-                        "y": 13
+                        "x": 49,
+                        "y": 10
                       },
                       {
-                        "x": 46,
-                        "y": 45
+                        "x": 49,
+                        "y": 48
                       },
                       {
-                        "x": 14,
-                        "y": 45
+                        "x": 11,
+                        "y": 48
                       }
                     ]
                   ]
@@ -2011,7 +2116,7 @@
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
-                  "hasCustomCollisionMask": true,
+                  "hasCustomCollisionMask": false,
                   "image": "EnemyBullet.png",
                   "points": [
                     {
@@ -2031,26 +2136,7 @@
                     "x": 0,
                     "y": 0
                   },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 32,
-                        "y": 14
-                      },
-                      {
-                        "x": 32,
-                        "y": 18
-                      },
-                      {
-                        "x": 0,
-                        "y": 32
-                      }
-                    ]
-                  ]
+                  "customCollisionMask": []
                 }
               ]
             }
@@ -2259,8 +2345,8 @@
         "BarBottomPadding": 6,
         "BarLeftPadding": 4,
         "BarRightPadding": 4,
-        "MaxValue": 25,
-        "InitialValue": 25,
+        "MaxValue": 30,
+        "InitialValue": 30,
         "EasingDuration": 0.1
       },
       "childrenContent": {
@@ -3498,6 +3584,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/untitled-scene"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/mission-3"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
