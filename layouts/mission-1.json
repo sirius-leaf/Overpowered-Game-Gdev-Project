@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.1,
     "snap": true,
-    "zoomFactor": 0.24672586957406634,
+    "zoomFactor": 0.32169117647059353,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -75,7 +75,7 @@
     {
       "name": "IntroMaxY",
       "type": "number",
-      "value": -4224
+      "value": -4480
     },
     {
       "name": "MissionOrder",
@@ -174,8 +174,8 @@
       "name": "WorldBorder",
       "persistentUuid": "602d73bf-2b01-4fb0-a3e4-f7c527748cbd",
       "width": 500,
-      "x": 0,
-      "y": 365,
+      "x": -6,
+      "y": 384,
       "zOrder": 14,
       "numberProperties": [],
       "stringProperties": [],
@@ -678,7 +678,7 @@
       "persistentUuid": "a2f917ff-3cc7-476a-841f-690b4dbaa779",
       "width": 0,
       "x": 512,
-      "y": -3840,
+      "y": -4480,
       "zOrder": -7,
       "numberProperties": [],
       "stringProperties": [],
@@ -694,7 +694,7 @@
       "persistentUuid": "ddcde637-3bdc-4396-95aa-e93f65e0f68e",
       "width": 0,
       "x": 512,
-      "y": -3840,
+      "y": -4480,
       "zOrder": -10,
       "numberProperties": [],
       "stringProperties": [],
@@ -710,7 +710,7 @@
       "persistentUuid": "b0e2b11b-3281-4a2b-864b-142ef647a003",
       "width": 0,
       "x": -512,
-      "y": -3840,
+      "y": -4480,
       "zOrder": -7,
       "numberProperties": [],
       "stringProperties": [],
@@ -726,7 +726,7 @@
       "persistentUuid": "8e63f7f0-59e0-4b15-bbcb-38530f9addd3",
       "width": 0,
       "x": -512,
-      "y": -3840,
+      "y": -4480,
       "zOrder": -10,
       "numberProperties": [],
       "stringProperties": [],
@@ -747,6 +747,109 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 6784,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Barrier",
+      "persistentUuid": "c93b7d81-e8ea-459a-9f31-95a81081f6be",
+      "width": 128,
+      "x": -1216,
+      "y": -6080,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 6784,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Barrier",
+      "persistentUuid": "d2bb8283-3d69-45d0-b80a-c12c5ab0b41e",
+      "width": 128,
+      "x": 1088,
+      "y": -6208,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 224,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Laser",
+      "persistentUuid": "e94c9ab4-38d6-4095-a0fc-86e77ac87b2c",
+      "width": 2176,
+      "x": 0,
+      "y": -2304,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "PassValue",
+          "type": "number",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 224,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Laser",
+      "persistentUuid": "724d3dcb-0e99-40cc-b19e-1f772ec0bce7",
+      "width": 2176,
+      "x": 0,
+      "y": -3584,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "PassValue",
+          "type": "number",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 224,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Laser",
+      "persistentUuid": "82a94214-def1-4aac-b71e-8a77280a678d",
+      "width": 2176,
+      "x": 0,
+      "y": -4480,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "PassValue",
+          "type": "number",
+          "value": 10
+        }
+      ]
     }
   ],
   "objects": [],

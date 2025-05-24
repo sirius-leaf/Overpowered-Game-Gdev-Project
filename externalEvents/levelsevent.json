@@ -142,6 +142,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Player",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -1767,7 +1768,7 @@
                             "value": "Wait"
                           },
                           "parameters": [
-                            "1"
+                            "0.5"
                           ]
                         },
                         {
@@ -1786,7 +1787,7 @@
                             "value": "Wait"
                           },
                           "parameters": [
-                            "1"
+                            "0.5"
                           ]
                         },
                         {
@@ -1884,8 +1885,8 @@
                   },
                   "parameters": [
                     "TurretLaserPainter",
-                    "Turret.X()",
-                    "Turret.Y()",
+                    "Turret.PointX(\"Bullet\")",
+                    "Turret.PointY(\"Bullet\")",
                     "Turret.X() + cos(ToRad(Turret.Angle())) * LaserDistance",
                     "Turret.Y() + sin(ToRad(Turret.Angle())) * LaserDistance",
                     "TurretLaserPainter.Tween::Value(\"LaserThickness\")"
@@ -1927,7 +1928,7 @@
                     "Player",
                     "Health",
                     "-",
-                    "2"
+                    "5"
                   ]
                 }
               ]
@@ -2016,7 +2017,7 @@
                 "TurretRocket",
                 "Player.X()",
                 "Player.Y()",
-                "30",
+                "60",
                 ""
               ]
             },
@@ -2028,7 +2029,7 @@
                 "EnemyRocket",
                 "Player.X()",
                 "Player.Y()",
-                "30",
+                "60",
                 ""
               ]
             },
@@ -2064,12 +2065,18 @@
                     "value": "CollisionNP"
                   },
                   "parameters": [
-                    "Bullet",
                     "EnemyObject",
+                    "Bullet",
                     "",
                     "",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
                 }
               ],
               "actions": [
@@ -2087,15 +2094,6 @@
                 },
                 {
                   "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Bullet",
-                    "CollisionTimes"
-                  ]
-                },
-                {
-                  "type": {
                     "value": "Create"
                   },
                   "parameters": [
@@ -2105,14 +2103,93 @@
                     "EnemyObject.Y()",
                     ""
                   ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "Bullet",
+                            "Enemy",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "Bullet",
+                            "Turret",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "EnemyDestroyed",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ]
                 },
                 {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "EnemyObject",
-                    ""
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PickNearest"
+                      },
+                      "parameters": [
+                        "EnemyObject",
+                        "Bullet.X()",
+                        "Bullet.Y()",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Bullet",
+                        "CollisionTimes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "EnemyObject",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ]
@@ -2127,6 +2204,18 @@
                   "parameters": [
                     "Bullet",
                     "ReinforcedWall",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    "TiledReinforcedWall",
                     "",
                     "",
                     ""
@@ -2187,6 +2276,18 @@
                       "parameters": [
                         "Bullet",
                         "ReinforcedWall",
+                        "",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Bullet",
+                        "TiledReinforcedWall",
                         "",
                         "",
                         ""
@@ -3854,6 +3955,116 @@
               "parameters": [
                 "BlackScreen",
                 "\"Pause UI\""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    },
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "folded": true,
+      "name": "Laser Wall",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Laser",
+                "PlayerGroup",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "mod(TimeFromStart() * 10, 1)",
+                    "<=",
+                    "0.5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectValueTween"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Tween",
+                    "\"Force\"",
+                    "Tween::Value(\"Force\")",
+                    "0",
+                    "\"linear\"",
+                    "0.1",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Health",
+                    "-",
+                    "3"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberObjectVariable"
+              },
+              "parameters": [
+                "Laser",
+                "PassValue",
+                "<=",
+                "Player.EnemyDestroyed"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Laser",
+                ""
               ]
             }
           ]

@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.1,
     "snap": true,
-    "zoomFactor": 0.33253870912508104,
+    "zoomFactor": 0.32169117647059237,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -169,13 +169,13 @@
       "angle": 0,
       "customSize": true,
       "depth": 1,
-      "height": 500,
+      "height": 448,
       "layer": "",
       "name": "WorldBorder",
       "persistentUuid": "602d73bf-2b01-4fb0-a3e4-f7c527748cbd",
-      "width": 500,
+      "width": 512,
       "x": 0,
-      "y": 365,
+      "y": 384,
       "zOrder": 14,
       "numberProperties": [],
       "stringProperties": [],
@@ -1489,13 +1489,806 @@
       "layer": "",
       "name": "WorldBorder",
       "persistentUuid": "c40d0837-2ec1-40d1-b34c-999cdf462608",
-      "width": 500,
-      "x": -6,
+      "width": 512,
+      "x": 0,
       "y": -5632,
       "zOrder": 14,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 1408,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Barrier",
+      "persistentUuid": "9c52e2d6-d737-4dca-86fa-3ff5cdb59465",
+      "width": 128,
+      "x": -576,
+      "y": -704,
+      "zOrder": 23,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "29d4f66d-7fb7-4223-9666-61ff3b0c921c",
+      "width": 0,
+      "x": -576,
+      "y": -832,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "40621acd-cff3-4b00-ab6f-e7e0c211a0a2",
+      "width": 0,
+      "x": -704,
+      "y": -832,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "d10588ed-1cec-476f-9fa1-f70ae039dc37",
+      "width": 0,
+      "x": -704,
+      "y": -960,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "4e35efd4-4041-4e9b-b652-8fc6d8b2125c",
+      "width": 0,
+      "x": -832,
+      "y": -960,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 512,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Barrier",
+      "persistentUuid": "4ac21425-f47f-4dfd-8ac8-6155fc8bc8e2",
+      "width": 128,
+      "x": -960,
+      "y": -1600,
+      "zOrder": 23,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "57c6bdac-719f-4d29-a0bb-cba8de1e0d73",
+      "width": 0,
+      "x": -832,
+      "y": -1088,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "6118ae6b-7ed7-4fdd-a142-4a0e9a9b6a49",
+      "width": 0,
+      "x": -960,
+      "y": -1088,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "c7e807d0-3b1e-4bbb-b61e-f4e4524d0d83",
+      "width": 0,
+      "x": -960,
+      "y": -1728,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "625b4fbf-d4bf-4bad-b6ac-e7d0c0763089",
+      "width": 0,
+      "x": -832,
+      "y": -1728,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 2
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 2048,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Barrier",
+      "persistentUuid": "6646c9cd-a8df-4785-9b60-c500c94dc7d1",
+      "width": 128,
+      "x": -832,
+      "y": -3776,
+      "zOrder": 23,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "26ec0049-671f-423d-810f-dddefe5b14ca",
+      "width": 0,
+      "x": -832,
+      "y": -3904,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "e913a87e-30d9-4428-8e27-c1a54ea1b055",
+      "width": 0,
+      "x": -960,
+      "y": -3904,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "3507d16a-b2e4-4a4b-9994-4d9f0427c8bf",
+      "width": 0,
+      "x": -960,
+      "y": -4032,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "d9a0d007-642d-4cd4-ac58-166fe6f2fd2a",
+      "width": 0,
+      "x": -1088,
+      "y": -4032,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "754b1222-169a-479a-99ef-3aae255a6491",
+      "width": 0,
+      "x": -1088,
+      "y": -4160,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "3b9df8f2-cfee-4ade-9093-f66179476968",
+      "width": 0,
+      "x": -1216,
+      "y": -4160,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 2560,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Barrier",
+      "persistentUuid": "e9cc1ce9-fe4d-4bcc-a2f6-233b3485798e",
+      "width": 128,
+      "x": -1216,
+      "y": -6720,
+      "zOrder": 23,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 224,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Laser",
+      "persistentUuid": "0416e6ac-385a-447e-ae87-322e31e82b51",
+      "width": 1408,
+      "x": 0,
+      "y": -2432,
+      "zOrder": 25,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "PassValue",
+          "type": "number",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 224,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Laser",
+      "persistentUuid": "083e108b-e2b7-4243-b02b-999c149f2bff",
+      "width": 1408,
+      "x": 0,
+      "y": -3584,
+      "zOrder": 25,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "PassValue",
+          "type": "number",
+          "value": 10
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 1408,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Barrier",
+      "persistentUuid": "5b5da30a-a8d8-40c8-b409-3007bc9f5efb",
+      "width": 128,
+      "x": 448,
+      "y": -704,
+      "zOrder": 23,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "6cda12c8-1c03-47f2-826c-c4dc4a9a8096",
+      "width": 0,
+      "x": 448,
+      "y": -832,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "87a2ff20-d56f-474a-92fb-b686d1ce9afc",
+      "width": 0,
+      "x": 576,
+      "y": -832,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 2
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "6e2d6dcc-f3c4-436b-a592-3f864c2b561c",
+      "width": 0,
+      "x": 576,
+      "y": -960,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "7e53378c-0f2f-4433-8f56-08ed003db0f8",
+      "width": 0,
+      "x": 704,
+      "y": -960,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 2
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "70d56126-137a-4c38-914f-40b64a7cbd82",
+      "width": 0,
+      "x": 704,
+      "y": -1088,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "e347927b-6d37-49a6-b8a2-abcfaf224d79",
+      "width": 0,
+      "x": 832,
+      "y": -1088,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 2
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 512,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Barrier",
+      "persistentUuid": "8601f24f-c155-456b-ace8-45f92bb651a5",
+      "width": 128,
+      "x": 832,
+      "y": -1600,
+      "zOrder": 23,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "6e4d983c-0083-4a09-9064-bdd70ec940e4",
+      "width": 0,
+      "x": 832,
+      "y": -1728,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 1
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "e7ab9cf0-a9a4-4eec-b8fb-84294ad3629e",
+      "width": 0,
+      "x": 704,
+      "y": -1728,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 3
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 2048,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Barrier",
+      "persistentUuid": "5901157d-9321-42e2-b576-dbe75d7fbd6d",
+      "width": 128,
+      "x": 704,
+      "y": -3776,
+      "zOrder": 23,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "69d270d5-5ca6-413e-977f-f336b063ee07",
+      "width": 0,
+      "x": 704,
+      "y": -3904,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "d1372cc1-2bac-4bcc-8354-f540b3bccfa7",
+      "width": 0,
+      "x": 832,
+      "y": -3904,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 2
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "69cd7c7e-27d8-44cc-ad97-929c37b1658a",
+      "width": 0,
+      "x": 960,
+      "y": -4032,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 2
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "c6164a35-6dbd-4512-aaf1-2d3a8e30289c",
+      "width": 0,
+      "x": 832,
+      "y": -4032,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "e42f1ad8-c491-47c0-8d74-3c756cfdb820",
+      "width": 0,
+      "x": 1088,
+      "y": -4160,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 2
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "SlopeBarrier",
+      "persistentUuid": "9adbd55f-f3d0-4098-86d6-f4c4eaeb4d69",
+      "width": 0,
+      "x": 960,
+      "y": -4160,
+      "zOrder": 24,
+      "numberProperties": [
+        {
+          "name": "animation",
+          "value": 0
+        }
+      ],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 2560,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Barrier",
+      "persistentUuid": "a65b1299-b3e5-489c-97ca-2cbb60cdb358",
+      "width": 128,
+      "x": 1088,
+      "y": -6720,
+      "zOrder": 23,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 224,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Laser",
+      "persistentUuid": "cffcbf4b-f960-469e-94e4-53979ca58d10",
+      "width": 2176,
+      "x": 0,
+      "y": -4736,
+      "zOrder": 25,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "PassValue",
+          "type": "number",
+          "value": 14
+        }
+      ]
     }
   ],
   "objects": [],
