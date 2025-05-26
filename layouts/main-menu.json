@@ -1,13 +1,13 @@
 {
-  "b": 37,
+  "b": 26,
   "disableInputWhenNotFocused": true,
   "mangledName": "Main_32Menu",
   "name": "Main Menu",
-  "r": 37,
+  "r": 26,
   "standardSortMethod": true,
   "stopSoundsOnStartup": true,
   "title": "",
-  "v": 37,
+  "v": 26,
   "uiSettings": {
     "grid": false,
     "gridType": "rectangular",
@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.4950840073748888,
+    "zoomFactor": 0.4633111824513977,
     "windowMask": false
   },
   "objectsGroups": [
@@ -38,10 +38,22 @@
           "name": "Mission1"
         },
         {
-          "name": "MissionUndefined"
+          "name": "Mission2"
         },
         {
-          "name": "Mission2"
+          "name": "Mission3"
+        },
+        {
+          "name": "Mission4"
+        },
+        {
+          "name": "Mission5"
+        },
+        {
+          "name": "Setting"
+        },
+        {
+          "name": "Tutorial"
         }
       ]
     }
@@ -74,7 +86,7 @@
       "persistentUuid": "738e3def-4638-4ae5-879d-cb56451cdf4c",
       "width": 224,
       "x": 528,
-      "y": 298,
+      "y": 262,
       "zOrder": 2,
       "numberProperties": [],
       "stringProperties": [],
@@ -91,7 +103,7 @@
       "persistentUuid": "af8e0096-ff04-4ca0-951c-7b6f3cf1522c",
       "width": 166,
       "x": 557,
-      "y": 400,
+      "y": 459,
       "zOrder": 3,
       "numberProperties": [],
       "stringProperties": [],
@@ -106,7 +118,7 @@
       "layer": "",
       "name": "Back",
       "persistentUuid": "a73a202e-86ed-4802-aeb3-55e34fd891a1",
-      "width": 119,
+      "width": 137,
       "x": 13,
       "y": -705,
       "zOrder": 5,
@@ -124,24 +136,8 @@
       "persistentUuid": "cee3f173-3d09-4caf-9216-a3b00e775ff7",
       "width": 222,
       "x": 529,
-      "y": -531,
+      "y": -433,
       "zOrder": 6,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "depth": 1,
-      "height": 50,
-      "layer": "",
-      "name": "MissionUndefined",
-      "persistentUuid": "bf38f4fd-ffee-42df-b1f7-3e27570e02e9",
-      "width": 362,
-      "x": 459,
-      "y": -417,
-      "zOrder": 7,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -165,15 +161,226 @@
     {
       "angle": 0,
       "customSize": true,
-      "depth": 0,
+      "depth": 1,
       "height": 50,
       "layer": "",
       "name": "Mission2",
       "persistentUuid": "94e616ff-421c-4150-b7f3-2ebcdd1b5888",
-      "width": 222,
-      "x": 529,
-      "y": -473,
+      "width": 264,
+      "x": 508,
+      "y": -370,
       "zOrder": 9,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 50,
+      "layer": "",
+      "name": "Mission3",
+      "persistentUuid": "258d3958-54a2-447c-89f1-b9af37b640d2",
+      "width": 264,
+      "x": 508,
+      "y": -310,
+      "zOrder": 10,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 50,
+      "layer": "",
+      "name": "Mission4",
+      "persistentUuid": "d3c5ca5a-11d0-4ca5-9089-43bf6b8a64db",
+      "width": 264,
+      "x": 508,
+      "y": -253,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 50,
+      "layer": "",
+      "name": "Mission5",
+      "persistentUuid": "15337d57-5f60-4f14-bc61-ee3a607b6427",
+      "width": 264,
+      "x": 508,
+      "y": -193,
+      "zOrder": 12,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 79,
+      "layer": "",
+      "name": "SettingTitle",
+      "persistentUuid": "3844282f-79de-4eff-b6e6-58d06e5f176d",
+      "width": 1280,
+      "x": 0,
+      "y": 741,
+      "zOrder": 13,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 79,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Setting",
+      "persistentUuid": "88dd772b-6468-4913-a4f5-8afb7dcda35c",
+      "width": 316,
+      "x": 482,
+      "y": 356,
+      "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 48,
+      "height": 41,
+      "keepRatio": true,
+      "layer": "",
+      "name": "VolumeControl",
+      "persistentUuid": "bef47410-3f20-49a5-99b8-2457d1f762be",
+      "width": 612,
+      "x": 324,
+      "y": 975,
+      "zOrder": 16,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 53,
+      "layer": "",
+      "name": "VolumeLabel",
+      "persistentUuid": "0de15e4b-945d-4e9e-b17c-aae9b28e66ef",
+      "width": 226,
+      "x": 527,
+      "y": 915,
+      "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 73,
+      "height": 52,
+      "layer": "",
+      "name": "KeyboardLayoutToggle",
+      "persistentUuid": "34a01719-d00a-4034-9df1-9e63347001ed",
+      "width": 50,
+      "x": 615,
+      "y": 1125,
+      "zOrder": 18,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 1,
+      "height": 56,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Back",
+      "persistentUuid": "b72b88c1-69e7-463d-9c1d-7d02287b68ae",
+      "width": 137,
+      "x": 19,
+      "y": 739,
+      "zOrder": 5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "LayoutLabel",
+      "persistentUuid": "c09c8aeb-5a70-47cd-886b-00ed20c37750",
+      "width": 0,
+      "x": 397,
+      "y": 1059,
+      "zOrder": 19,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 53,
+      "layer": "",
+      "name": "EffectLabel",
+      "persistentUuid": "a360fde6-5f84-4686-b5af-8b0ebe274413",
+      "width": 272,
+      "x": 504,
+      "y": 1222,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 48,
+      "height": 52,
+      "layer": "",
+      "name": "EffectToggle",
+      "persistentUuid": "539529b5-c12f-4a85-9198-370a07b292e3",
+      "width": 50,
+      "x": 615,
+      "y": 1289,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 0,
+      "height": 53,
+      "layer": "",
+      "name": "Tutorial",
+      "persistentUuid": "27d62cd5-8bbe-4bd6-824d-3e929d97c79e",
+      "width": 208,
+      "x": 536,
+      "y": -495,
+      "zOrder": 22,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -211,7 +418,7 @@
         }
       ],
       "string": "Overblast Force",
-      "font": "",
+      "font": "Retro Gaming.ttf",
       "textAlignment": "center",
       "characterSize": 60,
       "color": {
@@ -234,7 +441,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "Overblast Force",
-        "font": "",
+        "font": "Retro Gaming.ttf",
         "textAlignment": "center",
         "verticalTextAlignment": "top",
         "characterSize": 60,
@@ -264,7 +471,7 @@
         }
       ],
       "string": "Start",
-      "font": "",
+      "font": "Retro Gaming.ttf",
       "textAlignment": "center",
       "characterSize": 60,
       "color": {
@@ -287,7 +494,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "Start",
-        "font": "",
+        "font": "Retro Gaming.ttf",
         "textAlignment": "center",
         "verticalTextAlignment": "center",
         "characterSize": 60,
@@ -317,7 +524,7 @@
         }
       ],
       "string": "Exit",
-      "font": "",
+      "font": "Retro Gaming.ttf",
       "textAlignment": "center",
       "characterSize": 60,
       "color": {
@@ -340,7 +547,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "Exit",
-        "font": "",
+        "font": "Retro Gaming.ttf",
         "textAlignment": "center",
         "verticalTextAlignment": "center",
         "characterSize": 60,
@@ -361,7 +568,7 @@
       "string": "m",
       "font": "",
       "textAlignment": "left",
-      "characterSize": 20,
+      "characterSize": 100,
       "color": {
         "b": 0,
         "g": 0,
@@ -385,7 +592,7 @@
         "font": "",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
-        "characterSize": 20,
+        "characterSize": 100,
         "color": "0;0;0"
       }
     },
@@ -401,7 +608,7 @@
       "effects": [],
       "behaviors": [],
       "string": "Back",
-      "font": "",
+      "font": "Retro Gaming.ttf",
       "textAlignment": "left",
       "characterSize": 40,
       "color": {
@@ -424,7 +631,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "Back",
-        "font": "",
+        "font": "Retro Gaming.ttf",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
         "characterSize": 40,
@@ -454,7 +661,7 @@
         }
       ],
       "string": "Mission 1",
-      "font": "",
+      "font": "Retro Gaming.ttf",
       "textAlignment": "center",
       "characterSize": 40,
       "color": {
@@ -477,64 +684,11 @@
         "smoothed": true,
         "underlined": false,
         "text": "Mission 1",
-        "font": "",
+        "font": "Retro Gaming.ttf",
         "textAlignment": "center",
         "verticalTextAlignment": "center",
         "characterSize": 40,
         "color": "255;255;255"
-      }
-    },
-    {
-      "assetStoreId": "",
-      "bold": false,
-      "italic": true,
-      "name": "MissionUndefined",
-      "smoothed": true,
-      "type": "TextObject::Text",
-      "underlined": false,
-      "variables": [],
-      "effects": [],
-      "behaviors": [
-        {
-          "name": "Anchor",
-          "type": "AnchorBehavior::AnchorBehavior",
-          "bottomEdgeAnchor": 0,
-          "leftEdgeAnchor": 4,
-          "relativeToOriginalWindowSize": true,
-          "rightEdgeAnchor": 0,
-          "topEdgeAnchor": 0,
-          "useLegacyBottomAndRightAnchors": false
-        }
-      ],
-      "string": "Coming Soon",
-      "font": "",
-      "textAlignment": "center",
-      "characterSize": 40,
-      "color": {
-        "b": 124,
-        "g": 124,
-        "r": 124
-      },
-      "content": {
-        "bold": false,
-        "isOutlineEnabled": false,
-        "isShadowEnabled": false,
-        "italic": true,
-        "outlineColor": "255;255;255",
-        "outlineThickness": 2,
-        "shadowAngle": 90,
-        "shadowBlurRadius": 2,
-        "shadowColor": "0;0;0",
-        "shadowDistance": 4,
-        "shadowOpacity": 127,
-        "smoothed": true,
-        "underlined": false,
-        "text": "Coming Soon",
-        "font": "",
-        "textAlignment": "center",
-        "verticalTextAlignment": "center",
-        "characterSize": 40,
-        "color": "124;124;124"
       }
     },
     {
@@ -560,7 +714,7 @@
         }
       ],
       "string": "Select The Mission",
-      "font": "",
+      "font": "Retro Gaming.ttf",
       "textAlignment": "center",
       "characterSize": 60,
       "color": {
@@ -583,7 +737,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "Select The Mission",
-        "font": "",
+        "font": "Retro Gaming.ttf",
         "textAlignment": "center",
         "verticalTextAlignment": "center",
         "characterSize": 60,
@@ -613,7 +767,7 @@
         }
       ],
       "string": "Mission 2",
-      "font": "",
+      "font": "Retro Gaming.ttf",
       "textAlignment": "center",
       "characterSize": 40,
       "color": {
@@ -636,11 +790,796 @@
         "smoothed": true,
         "underlined": false,
         "text": "Mission 2",
-        "font": "",
+        "font": "Retro Gaming.ttf",
         "textAlignment": "center",
         "verticalTextAlignment": "center",
         "characterSize": 40,
         "color": "124;124;124"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "Mission3",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 4,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
+      "string": "Mission 3",
+      "font": "Retro Gaming.ttf",
+      "textAlignment": "center",
+      "characterSize": 40,
+      "color": {
+        "b": 124,
+        "g": 124,
+        "r": 124
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Mission 3",
+        "font": "Retro Gaming.ttf",
+        "textAlignment": "center",
+        "verticalTextAlignment": "center",
+        "characterSize": 40,
+        "color": "124;124;124"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "Mission4",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 4,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
+      "string": "Mission 4",
+      "font": "Retro Gaming.ttf",
+      "textAlignment": "center",
+      "characterSize": 40,
+      "color": {
+        "b": 124,
+        "g": 124,
+        "r": 124
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Mission 4",
+        "font": "Retro Gaming.ttf",
+        "textAlignment": "center",
+        "verticalTextAlignment": "center",
+        "characterSize": 40,
+        "color": "124;124;124"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "Mission5",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 4,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
+      "string": "Mission 5",
+      "font": "Retro Gaming.ttf",
+      "textAlignment": "center",
+      "characterSize": 40,
+      "color": {
+        "b": 124,
+        "g": 124,
+        "r": 124
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Mission 5",
+        "font": "Retro Gaming.ttf",
+        "textAlignment": "center",
+        "verticalTextAlignment": "center",
+        "characterSize": 40,
+        "color": "124;124;124"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "SettingTitle",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 4,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        },
+        {
+          "name": "SecretCode",
+          "type": "SecretCode::SecretCode",
+          "Code": "r e s e t m i s s i o n t o z e r o",
+          "Count": 0,
+          "CodeEntered": false,
+          "AcceptingCode": true
+        }
+      ],
+      "string": "Setting",
+      "font": "Retro Gaming.ttf",
+      "textAlignment": "center",
+      "characterSize": 60,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Setting",
+        "font": "Retro Gaming.ttf",
+        "textAlignment": "center",
+        "verticalTextAlignment": "top",
+        "characterSize": 60,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "Setting",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 4,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
+      "string": "Setting",
+      "font": "Retro Gaming.ttf",
+      "textAlignment": "center",
+      "characterSize": 60,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Setting",
+        "font": "Retro Gaming.ttf",
+        "textAlignment": "center",
+        "verticalTextAlignment": "center",
+        "characterSize": 60,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "assetStoreId": "bfeeb465a4a164b560a2215e3ff9e78e66123af43cbf7ef1f22d56fca4271c80",
+      "name": "VolumeControl",
+      "type": "PanelSpriteSlider::PanelSpriteSlider",
+      "variant": "",
+      "variables": [
+        {
+          "name": "Interacted",
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 4,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
+      "content": {
+        "BarTopPadding": 6,
+        "BarLeftPadding": 6,
+        "BarRightPadding": 6,
+        "BarBottomPadding": 6,
+        "LabelMargin": 6,
+        "InitialValue": 100
+      },
+      "childrenContent": {
+        "Background": {
+          "bottomMargin": 4,
+          "height": 28,
+          "leftMargin": 2,
+          "rightMargin": 2,
+          "texture": "Square White Slider Border.png",
+          "tiled": false,
+          "topMargin": 4,
+          "width": 265
+        },
+        "FillBar": {
+          "bottomMargin": 2,
+          "height": 16,
+          "leftMargin": 0,
+          "rightMargin": 0,
+          "texture": "Square White Slider Fill Bar.png",
+          "tiled": false,
+          "topMargin": 0,
+          "width": 16
+        },
+        "Label": {
+          "bold": false,
+          "italic": false,
+          "smoothed": true,
+          "underlined": false,
+          "string": "It displays the value when it changes.",
+          "font": "Retro Gaming.ttf",
+          "textAlignment": "",
+          "characterSize": 20,
+          "color": {
+            "b": 221,
+            "g": 221,
+            "r": 221
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "It displays the value when it changes.",
+            "font": "Retro Gaming.ttf",
+            "textAlignment": "",
+            "verticalTextAlignment": "top",
+            "characterSize": 20,
+            "color": "221;221;221"
+          }
+        },
+        "Thumb": {
+          "bottomMargin": 2,
+          "height": 36,
+          "leftMargin": 1,
+          "rightMargin": 1,
+          "texture": "Square White Slider Thumb.png",
+          "tiled": false,
+          "topMargin": 2,
+          "width": 22
+        }
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "VolumeLabel",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 4,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        },
+        {
+          "name": "SecretCode",
+          "type": "SecretCode::SecretCode",
+          "Code": "r e s e t m i s s i o n t o z e r o",
+          "Count": 0,
+          "CodeEntered": false,
+          "AcceptingCode": true
+        }
+      ],
+      "string": "Volume",
+      "font": "Retro Gaming.ttf",
+      "textAlignment": "center",
+      "characterSize": 40,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Volume",
+        "font": "Retro Gaming.ttf",
+        "textAlignment": "center",
+        "verticalTextAlignment": "top",
+        "characterSize": 40,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "assetStoreId": "7f3b0673f7479b4b487bcbadbb3c8b9412a8e6d8694543f9ec3419365ebff3f5",
+      "name": "KeyboardLayoutToggle",
+      "type": "SpriteToggleSwitch::SpriteToggleSwitch",
+      "variant": "",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 4,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
+      "content": {},
+      "childrenContent": {
+        "State": {
+          "adaptCollisionMaskAutomatically": false,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "Unchecked",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Square White Toggle_Off.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Checked",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Square White Toggle_On.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "LayoutLabel",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 4,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        },
+        {
+          "name": "SecretCode",
+          "type": "SecretCode::SecretCode",
+          "Code": "r e s e t m i s s i o n t o z e r o",
+          "Count": 0,
+          "CodeEntered": false,
+          "AcceptingCode": true
+        }
+      ],
+      "string": "Use QWERTY Layout",
+      "font": "Retro Gaming.ttf",
+      "textAlignment": "center",
+      "characterSize": 40,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Use QWERTY Layout",
+        "font": "Retro Gaming.ttf",
+        "textAlignment": "center",
+        "verticalTextAlignment": "top",
+        "characterSize": 40,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "assetStoreId": "7f3b0673f7479b4b487bcbadbb3c8b9412a8e6d8694543f9ec3419365ebff3f5",
+      "name": "EffectToggle",
+      "type": "SpriteToggleSwitch::SpriteToggleSwitch",
+      "variant": "",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 4,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
+      "content": {},
+      "childrenContent": {
+        "State": {
+          "adaptCollisionMaskAutomatically": false,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "Unchecked",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Square White Toggle_Off.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Checked",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Square White Toggle_On.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "EffectLabel",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 4,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        },
+        {
+          "name": "SecretCode",
+          "type": "SecretCode::SecretCode",
+          "Code": "r e s e t m i s s i o n t o z e r o",
+          "Count": 0,
+          "CodeEntered": false,
+          "AcceptingCode": true
+        }
+      ],
+      "string": "Use Effect",
+      "font": "Retro Gaming.ttf",
+      "textAlignment": "center",
+      "characterSize": 40,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Use Effect",
+        "font": "Retro Gaming.ttf",
+        "textAlignment": "center",
+        "verticalTextAlignment": "top",
+        "characterSize": 40,
+        "color": "255;255;255"
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "Tutorial",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 4,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
+      "string": "Tutorial",
+      "font": "Retro Gaming.ttf",
+      "textAlignment": "center",
+      "characterSize": 40,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "Tutorial",
+        "font": "Retro Gaming.ttf",
+        "textAlignment": "center",
+        "verticalTextAlignment": "center",
+        "characterSize": 40,
+        "color": "255;255;255"
       }
     }
   ],
@@ -648,31 +1587,79 @@
     "folderName": "__ROOT",
     "children": [
       {
-        "objectName": "Title"
+        "folderName": "Setting",
+        "children": [
+          {
+            "objectName": "KeyboardLayoutToggle"
+          },
+          {
+            "objectName": "EffectToggle"
+          },
+          {
+            "objectName": "SettingTitle"
+          },
+          {
+            "objectName": "VolumeLabel"
+          },
+          {
+            "objectName": "LayoutLabel"
+          },
+          {
+            "objectName": "EffectLabel"
+          },
+          {
+            "objectName": "VolumeControl"
+          }
+        ]
       },
       {
-        "objectName": "Start"
+        "folderName": "Level Select",
+        "children": [
+          {
+            "objectName": "Mission5"
+          },
+          {
+            "objectName": "Mission4"
+          },
+          {
+            "objectName": "Mission3"
+          },
+          {
+            "objectName": "Mission2"
+          },
+          {
+            "objectName": "Mission1"
+          },
+          {
+            "objectName": "Tutorial"
+          },
+          {
+            "objectName": "Back"
+          },
+          {
+            "objectName": "SelectMission"
+          }
+        ]
+      },
+      {
+        "folderName": "Main",
+        "children": [
+          {
+            "objectName": "Exit"
+          },
+          {
+            "objectName": "Setting"
+          },
+          {
+            "objectName": "Start"
+          },
+          {
+            "objectName": "Title"
+          }
+        ]
       },
       {
         "objectName": "NewText"
-      },
-      {
-        "objectName": "Exit"
-      },
-      {
-        "objectName": "Back"
-      },
-      {
-        "objectName": "SelectMission"
-      },
-      {
-        "objectName": "Mission1"
-      },
-      {
-        "objectName": "Mission2"
-      },
-      {
-        "objectName": "MissionUndefined"
       }
     ]
   },
@@ -727,6 +1714,156 @@
                 "\"Mission\"",
                 "",
                 "AvailableMission"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "GroupExists"
+              },
+              "parameters": [
+                "\"Setting\"",
+                "\"Volume\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ReadNumberFromStorage"
+              },
+              "parameters": [
+                "\"Setting\"",
+                "\"Volume\"",
+                "",
+                "GameSettingValue.volume"
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteSlider::PanelSpriteSlider::SetValue"
+              },
+              "parameters": [
+                "VolumeControl",
+                "=",
+                "GameSettingValue.volume",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "GroupExists"
+              },
+              "parameters": [
+                "\"Setting\"",
+                "\"Layout\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ReadNumberFromStorage"
+              },
+              "parameters": [
+                "\"Setting\"",
+                "\"Layout\"",
+                "",
+                "GameSettingValue.qwertyLayout"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "GameSettingValue.qwertyLayout",
+                    "=",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::SetChecked"
+                  },
+                  "parameters": [
+                    "KeyboardLayoutToggle",
+                    "no",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "GroupExists"
+              },
+              "parameters": [
+                "\"Setting\"",
+                "\"Effect\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ReadNumberFromStorage"
+              },
+              "parameters": [
+                "\"Setting\"",
+                "\"Effect\"",
+                "",
+                "GameSettingValue.useEffect"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "GameSettingValue.useEffect",
+                    "=",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::SetChecked"
+                  },
+                  "parameters": [
+                    "EffectToggle",
+                    "no",
+                    ""
+                  ]
+                }
               ]
             }
           ]
@@ -811,30 +1948,120 @@
           ]
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Level Select Button",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
             {
-              "type": {
-                "value": "NumberVariable"
-              },
-              "parameters": [
-                "AvailableMission",
-                ">=",
-                "2"
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "AvailableMission",
+                    ">=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::ChangeColor"
+                  },
+                  "parameters": [
+                    "Mission2",
+                    "\"255;255;255\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "AvailableMission",
+                    ">=",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::ChangeColor"
+                  },
+                  "parameters": [
+                    "Mission3",
+                    "\"255;255;255\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "AvailableMission",
+                    ">=",
+                    "4"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::ChangeColor"
+                  },
+                  "parameters": [
+                    "Mission4",
+                    "\"255;255;255\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "AvailableMission",
+                    ">=",
+                    "5"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextObject::ChangeColor"
+                  },
+                  "parameters": [
+                    "Mission5",
+                    "\"255;255;255\""
+                  ]
+                }
               ]
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "value": "TextObject::ChangeColor"
-              },
-              "parameters": [
-                "Mission2",
-                "\"255;255;255\""
-              ]
-            }
-          ]
+          "parameters": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -913,6 +2140,34 @@
                     "value": "SourisSurObjet"
                   },
                   "parameters": [
+                    "Setting",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "MainMenuCamY",
+                    "=",
+                    "1080"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
                     "Back",
                     "",
                     "",
@@ -928,6 +2183,34 @@
                   "parameters": [
                     "MainMenuCamY",
                     "=",
+                    "360"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "Tutorial",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "CamPosY",
+                    "\"Tutorial\"",
                     "360"
                   ]
                 }
@@ -998,8 +2281,469 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "Mission3",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "AvailableMission",
+                    ">=",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "CamPosY",
+                    "\"Mission 3\"",
+                    "360"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "Mission4",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "AvailableMission",
+                    ">=",
+                    "4"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "CamPosY",
+                    "\"Mission 4\"",
+                    "360"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "Mission5",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "AvailableMission",
+                    ">=",
+                    "5"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "CamPosY",
+                    "\"Mission 5\"",
+                    "360"
+                  ]
+                }
+              ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SecretCode::SecretCode::CodeEntered"
+              },
+              "parameters": [
+                "Title",
+                "SecretCode",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "AvailableMission",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierExp"
+              },
+              "parameters": [
+                "\"Proggress\"",
+                "\"Mission\"",
+                "AvailableMission"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "CurrentSceneName()",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "VolumeControl",
+                "Interacted",
+                "=",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteSlider::PanelSpriteSlider::IsBeingDragged"
+              },
+              "parameters": [
+                "VolumeControl",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "VolumeControl",
+                "Interacted",
+                "True",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "VolumeControl",
+                "Interacted",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "inverted": true,
+                "value": "PanelSpriteSlider::PanelSpriteSlider::IsBeingDragged"
+              },
+              "parameters": [
+                "VolumeControl",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "GameSettingValue.volume",
+                "=",
+                "VolumeControl.Value()"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModGlobalVolume"
+              },
+              "parameters": [
+                "",
+                "=",
+                "GameSettingValue.volume"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "EnemyShoot",
+                "",
+                "30",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "EcrireFichierExp"
+              },
+              "parameters": [
+                "\"Setting\"",
+                "\"Volume\"",
+                "GameSettingValue.volume"
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Layout Button",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::HasJustBeenChecked"
+                  },
+                  "parameters": [
+                    "KeyboardLayoutToggle",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "GameSettingValue.qwertyLayout",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::HasJustBeenUnchecked"
+                  },
+                  "parameters": [
+                    "KeyboardLayoutToggle",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "GameSettingValue.qwertyLayout",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::HasJustBeenToggled"
+                  },
+                  "parameters": [
+                    "KeyboardLayoutToggle",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "EcrireFichierExp"
+                  },
+                  "parameters": [
+                    "\"Setting\"",
+                    "\"Layout\"",
+                    "GameSettingValue.qwertyLayout"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Effect Button",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::HasJustBeenChecked"
+                  },
+                  "parameters": [
+                    "EffectToggle",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "GameSettingValue.useEffect",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::HasJustBeenUnchecked"
+                  },
+                  "parameters": [
+                    "EffectToggle",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "GameSettingValue.useEffect",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SpriteToggleSwitch::SpriteToggleSwitch::HasJustBeenToggled"
+                  },
+                  "parameters": [
+                    "EffectToggle",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "EcrireFichierExp"
+                  },
+                  "parameters": [
+                    "\"Setting\"",
+                    "\"Effect\"",
+                    "GameSettingValue.useEffect"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
         }
       ],
       "variables": [
@@ -1007,53 +2751,6 @@
           "name": "LerpDecay",
           "type": "number",
           "value": 15
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "SecretCode::SecretCode::CodeEntered"
-          },
-          "parameters": [
-            "Title",
-            "SecretCode",
-            ""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "SetNumberVariable"
-          },
-          "parameters": [
-            "AvailableMission",
-            "=",
-            "1"
-          ]
-        },
-        {
-          "type": {
-            "value": "EcrireFichierExp"
-          },
-          "parameters": [
-            "\"Proggress\"",
-            "\"Mission\"",
-            "AvailableMission"
-          ]
-        },
-        {
-          "type": {
-            "value": "Scene"
-          },
-          "parameters": [
-            "",
-            "CurrentSceneName()",
-            ""
-          ]
         }
       ]
     }

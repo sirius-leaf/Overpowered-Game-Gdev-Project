@@ -1,5 +1,5 @@
 {
-  "firstLayout": "",
+  "firstLayout": "Main Menu",
   "gdVersion": {
     "build": 231,
     "major": 5,
@@ -11,20 +11,20 @@
     "antialiasingMode": "MSAA",
     "antialisingEnabledOnMobile": false,
     "folderProject": true,
-    "orientation": "landscape",
+    "orientation": "default",
     "packageName": "com.leafs.overblastforce",
     "pixelsRounding": true,
     "projectUuid": "934b88b9-9abc-4890-9c0d-2284622a2e17",
     "scaleMode": "nearest",
     "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "name": "Overblast Force",
-    "description": "",
+    "description": "Use your plane to secure the energy containers using your slightly overpowered weapons.",
     "author": "",
     "windowWidth": 1280,
     "windowHeight": 720,
-    "latestCompilationDirectory": "",
+    "latestCompilationDirectory": "D:\\Finished Games\\Overblast Force",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
@@ -61,7 +61,7 @@
       "backgroundColor": 0,
       "backgroundFadeInDuration": 0.2,
       "backgroundImageResourceName": "",
-      "gdevelopLogoStyle": "light",
+      "gdevelopLogoStyle": "dark",
       "logoAndProgressFadeInDuration": 0.2,
       "logoAndProgressLogoFadeInDelay": 0,
       "minDuration": 1.5,
@@ -83,7 +83,9 @@
     "authorUsernames": [
       "Sirius_Leaf_"
     ],
-    "categories": [],
+    "categories": [
+      "shooter"
+    ],
     "playableDevices": [],
     "extensionProperties": [],
     "platforms": [
@@ -609,6 +611,81 @@
         "metadata": "",
         "name": "Laser.png",
         "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Retro Gaming.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Retro Gaming.ttf",
+        "userAdded": false
+      },
+      {
+        "file": "assets/Square White Slider Border.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Square White Slider Border.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Settings UI/Slider/pixel art/324e5f522f6242e9f93090e75ddc38427c3a6c42e8236dbf0ed541bd85cf7221_Square White Slider Border.png",
+          "name": "Square White Slider Border.png"
+        }
+      },
+      {
+        "file": "assets/Square White Slider Fill Bar.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Square White Slider Fill Bar.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Settings UI/Slider/pixel art/47bc684198cd25b3ec74b0e72c2e2c7abb1b6736bd9f4b78a943c663e83118bf_Square White Slider Fill Bar.png",
+          "name": "Square White Slider Fill Bar.png"
+        }
+      },
+      {
+        "file": "assets/Square White Slider Thumb.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Square White Slider Thumb.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Settings UI/Slider/pixel art/848f861767e7ce4581dba9e122ee7bafeaca57987655cebe1f78ab31d1300f0f_Square White Slider Thumb.png",
+          "name": "Square White Slider Thumb.png"
+        }
+      },
+      {
+        "file": "assets/Square White Toggle_Off.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Square White Toggle_Off.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Settings UI/Toggle Switch/pixel art/e88334de6c9ad921b4719b34a512d70b923fcf36112610a7f9ed4d56aa77cfd0_Square White Toggle_Off.png",
+          "name": "Square White Toggle_Off.png"
+        }
+      },
+      {
+        "file": "assets/Square White Toggle_On.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Square White Toggle_On.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Settings UI/Toggle Switch/pixel art/ebdb63dcba9c53d41a0a468ba28929bf88b1b8698d672fc17568723fe1fbc3cc_Square White Toggle_On.png",
+          "name": "Square White Toggle_On.png"
+        }
+      },
+      {
+        "disablePreload": false,
+        "file": "assets/TutorialText.json",
+        "kind": "json",
+        "metadata": "{\"extension\":\".json\",\"localFilePath\":\"assets/TutorialText.json\"}",
+        "name": "TutorialText",
         "userAdded": false
       }
     ],
@@ -2099,15 +2176,15 @@
       "particleLifeTimeMin": 0.5,
       "particleRed1": 255,
       "particleRed2": 255,
-      "particleSize1": 100,
+      "particleSize1": 200,
       "particleSize2": 0,
       "particleSizeRandomness1": 0,
       "particleSizeRandomness2": 0,
-      "rendererParam1": 64,
-      "rendererParam2": 1,
-      "rendererType": "Point",
-      "tank": 10,
-      "textureParticleName": "",
+      "rendererParam1": 300,
+      "rendererParam2": 300,
+      "rendererType": "Quad",
+      "tank": 19,
+      "textureParticleName": "PlayerCharge2.png",
       "type": "ParticleSystem::ParticleEmitter",
       "zoneRadius": 1,
       "variables": [],
@@ -2672,7 +2749,7 @@
         }
       ],
       "string": "Mission -",
-      "font": "",
+      "font": "Retro Gaming.ttf",
       "textAlignment": "center",
       "characterSize": 80,
       "color": {
@@ -2695,7 +2772,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "Mission -",
-        "font": "",
+        "font": "Retro Gaming.ttf",
         "textAlignment": "center",
         "verticalTextAlignment": "center",
         "characterSize": 80,
@@ -2725,7 +2802,7 @@
         }
       ],
       "string": "Restart",
-      "font": "",
+      "font": "Retro Gaming.ttf",
       "textAlignment": "center",
       "characterSize": 50,
       "color": {
@@ -2748,7 +2825,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "Restart",
-        "font": "",
+        "font": "Retro Gaming.ttf",
         "textAlignment": "center",
         "verticalTextAlignment": "center",
         "characterSize": 50,
@@ -2778,7 +2855,7 @@
         }
       ],
       "string": "End Mission",
-      "font": "",
+      "font": "Retro Gaming.ttf",
       "textAlignment": "center",
       "characterSize": 50,
       "color": {
@@ -2801,7 +2878,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "End Mission",
-        "font": "",
+        "font": "Retro Gaming.ttf",
         "textAlignment": "center",
         "verticalTextAlignment": "center",
         "characterSize": 50,
@@ -2831,7 +2908,7 @@
         }
       ],
       "string": " ",
-      "font": "",
+      "font": "Retro Gaming.ttf",
       "textAlignment": "center",
       "characterSize": 25,
       "color": {
@@ -2854,7 +2931,7 @@
         "smoothed": true,
         "underlined": false,
         "text": " ",
-        "font": "",
+        "font": "Retro Gaming.ttf",
         "textAlignment": "center",
         "verticalTextAlignment": "center",
         "characterSize": 25,
@@ -3050,7 +3127,7 @@
         }
       ],
       "string": "Game Paused",
-      "font": "",
+      "font": "Retro Gaming.ttf",
       "textAlignment": "center",
       "characterSize": 80,
       "color": {
@@ -3073,7 +3150,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "Game Paused",
-        "font": "",
+        "font": "Retro Gaming.ttf",
         "textAlignment": "center",
         "verticalTextAlignment": "center",
         "characterSize": 80,
@@ -3103,7 +3180,7 @@
         }
       ],
       "string": "Exit Mission",
-      "font": "",
+      "font": "Retro Gaming.ttf",
       "textAlignment": "center",
       "characterSize": 50,
       "color": {
@@ -3126,7 +3203,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "Exit Mission",
-        "font": "",
+        "font": "Retro Gaming.ttf",
         "textAlignment": "center",
         "verticalTextAlignment": "center",
         "characterSize": 50,
@@ -3156,7 +3233,7 @@
         }
       ],
       "string": "Resume",
-      "font": "",
+      "font": "Retro Gaming.ttf",
       "textAlignment": "center",
       "characterSize": 50,
       "color": {
@@ -3179,7 +3256,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "Resume",
-        "font": "",
+        "font": "Retro Gaming.ttf",
         "textAlignment": "center",
         "verticalTextAlignment": "center",
         "characterSize": 50,
@@ -3282,7 +3359,7 @@
         }
       ],
       "string": "Press \"Space\" to skip intro",
-      "font": "",
+      "font": "Retro Gaming.ttf",
       "textAlignment": "left",
       "characterSize": 40,
       "color": {
@@ -3305,7 +3382,7 @@
         "smoothed": true,
         "underlined": false,
         "text": "Press \"Space\" to skip intro",
-        "font": "",
+        "font": "Retro Gaming.ttf",
         "textAlignment": "left",
         "verticalTextAlignment": "top",
         "characterSize": 40,
@@ -3943,12 +4020,37 @@
       "name": "AvailableMission",
       "type": "number",
       "value": 1
+    },
+    {
+      "name": "GameSettingValue",
+      "type": "structure",
+      "children": [
+        {
+          "name": "qwertyLayout",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "useEffect",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "volume",
+          "type": "number",
+          "value": 100
+        }
+      ]
     }
   ],
   "layouts": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/untitled-scene"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/tutorial"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
@@ -3993,6 +4095,14 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/panelspritecontinuousbar"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/panelspriteslider"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/spritetoggleswitch"
     }
   ],
   "externalLayouts": [

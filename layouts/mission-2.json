@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.1,
     "snap": true,
-    "zoomFactor": 0.32169117647059237,
+    "zoomFactor": 0.3216911764705924,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -1901,7 +1901,7 @@
         {
           "name": "PassValue",
           "type": "number",
-          "value": 10
+          "value": 7
         }
       ]
     },
@@ -2286,7 +2286,7 @@
         {
           "name": "PassValue",
           "type": "number",
-          "value": 14
+          "value": 11
         }
       ]
     }

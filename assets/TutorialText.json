@@ -1,0 +1,12 @@
+[
+	{
+		"title": "Start",
+		"tags": "",
+		"body": "Use Arrow Key or WASD to move\nYou can change the keyboard layout in the setting if you want\nAim with your cursor\nLeft click to shoot\n-\nAs you can see, the power is really big\nSo shoot carefully, because you might get pushed into something dangerous\nNow move forward into the next step\nAs you can see there is a Laser Wall in front and some Enemy Units\nBe careful with that Laser Wall, because it can do quite a lot of damage\nTo turn off the Laser Wall you must destroy all enemy units first\nGreat job, now move forward into the Energy Container\nThis is something you have to take care of, so don't shoot this\nTo secure it you have to be right on top of the Energy Container\nimpressive, looks like you're ready for the real mission\ngood luck on your next mission!",
+		"position": {
+			"x": 375,
+			"y": 211
+		},
+		"colorID": 0
+	}
+]
